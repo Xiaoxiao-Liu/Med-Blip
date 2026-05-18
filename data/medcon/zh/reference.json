@@ -1,0 +1,53 @@
+[
+    {
+        "encounter_id": "ex_zh_001",
+        "responses": [
+            {
+                "content_zh": "根据描述的症状，这可能是接触性皮炎。建议外用糖皮质激素软膏，并尽量避免接触过敏原。如果症状持续，口服抗组胺药可以帮助缓解瘙痒和炎症。",
+                "author_id": "doc_01",
+                "completeness": 1.0,
+                "contains_freq_ans": 1.0
+            },
+            {
+                "content_zh": "皮疹和瘙痒的表现提示接触性皮炎。治疗方案包括外用激素和查找致敏原。如果原因不明确，可以考虑斑贴试验。",
+                "author_id": "doc_02",
+                "completeness": 1.0,
+                "contains_freq_ans": 0.0
+            }
+        ]
+    },
+    {
+        "encounter_id": "ex_zh_002",
+        "responses": [
+            {
+                "content_zh": "持续咳嗽和发热可能提示肺炎。建议拍胸部X光片以确认诊断。在等待培养结果期间，应开始经验性阿莫西林抗生素治疗。",
+                "author_id": "doc_01",
+                "completeness": 1.0,
+                "contains_freq_ans": 1.0
+            },
+            {
+                "content_zh": "考虑到咳嗽和高热持续超过一周，应考虑细菌性肺炎的可能。建议进行胸部影像学检查和痰培养。尽快开始抗生素治疗。",
+                "author_id": "doc_03",
+                "completeness": 0.0,
+                "contains_freq_ans": 1.0
+            }
+        ]
+    },
+    {
+        "encounter_id": "ex_zh_003",
+        "responses": [
+            {
+                "content_zh": "血糖水平提示2型糖尿病。生活方式调整包括饮食和运动是首选治疗方案。二甲双胍是推荐的初始药物治疗。",
+                "author_id": "doc_02",
+                "completeness": 1.0,
+                "contains_freq_ans": 1.0
+            },
+            {
+                "content_zh": "空腹血糖和糖化血红蛋白升高确认为2型糖尿病。从饮食指导、规律运动和二甲双胍治疗开始。定期监测血糖。",
+                "author_id": "doc_01",
+                "completeness": 1.0,
+                "contains_freq_ans": 1.0
+            }
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+lang: en
+reference_file: data/medcon/en/reference.json
+prediction_file: data/medcon/en/prediction.json
+umls_concepts_file: data/medcon/en/final_UMLS_sets.json
+umls_stop_words_file: data/medcon/en/UMLS_stop_words.json
+output_dir: outputs/medcon_en
+
+# Model settings (for generation mode)
+backend: blip2
+model_name: Salesforce/blip2-opt-2.7b
+batch_size: 2
+max_answer_length: 128

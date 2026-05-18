@@ -1,0 +1,11 @@
+lang: zh
+reference_file: data/medcon/zh/reference.json
+prediction_file: data/medcon/zh/prediction.json
+umls_concepts_file: data/medcon/zh/final_UMLS_sets_CHI.json
+output_dir: outputs/medcon_zh
+
+# Model settings (for generation mode)
+backend: blip2
+model_name: Salesforce/blip2-opt-2.7b
+batch_size: 2
+max_answer_length: 128

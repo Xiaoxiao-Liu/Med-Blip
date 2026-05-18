@@ -1,0 +1,26 @@
+[
+    {
+        "encounter_id": "ex_001",
+        "responses": [
+            {
+                "content_en": "This looks like contact dermatitis. Apply topical corticosteroid cream to the affected area and try to identify and avoid the allergen causing the reaction. Antihistamines can help with itching."
+            }
+        ]
+    },
+    {
+        "encounter_id": "ex_002",
+        "responses": [
+            {
+                "content_en": "The symptoms suggest possible pneumonia. I recommend a chest X-ray for diagnosis. Antibiotic treatment with amoxicillin should be considered while waiting for lab results."
+            }
+        ]
+    },
+    {
+        "encounter_id": "ex_003",
+        "responses": [
+            {
+                "content_en": "The lab results are consistent with type 2 diabetes. Start with lifestyle changes including diet modification and exercise. Metformin is the first-line medication for blood glucose control."
+            }
+        ]
+    }
+]

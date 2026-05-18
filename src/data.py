@@ -1,8 +1,8 @@
-"""Dataset and prompt formatting for image-QA tasks."""
+"""Dataset and prompt formatting for image-QA and MedCon NLG tasks."""
 
 import json
 import os
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import torch
 from PIL import Image
@@ -66,3 +66,74 @@ def collate_fn(batch):
     answers = [b["answer"] for b in batch]
     meta = [{k: b[k] for k in ("image_path", "question", "raw_answer")} for b in batch]
     return {"images": images, "prompts": prompts, "answers": answers, "meta": meta}
+
+
+# ---------------------------------------------------------------------------
+# MedCon dataset — encounter-based medical NLG
+# ---------------------------------------------------------------------------
+
+def load_json(path: str):
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+class MedConDataset(Dataset):
+    """Loads encounter-based medical conversation data.
+
+    Each sample is one encounter with ``encounter_id`` and a list of
+    ``responses``.  For references the list may contain multiple annotator
+    answers; for predictions it typically contains one.
+    """
+
+    def __init__(self, json_path: str, lang: str = "en",
+                 image_root: Optional[str] = None, transform=None):
+        self.data = load_json(json_path)
+        self.lang = lang
+        self.content_key = f"content_{lang}"
+        self.image_root = image_root
+        self.transform = transform or DEFAULT_TRANSFORM
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        item = self.data[idx]
+        encounter_id = item["encounter_id"]
+        responses = item["responses"]
+
+        texts = [r[self.content_key] for r in responses if self.content_key in r]
+        prompt = f"Medical encounter {encounter_id}: provide a medical response."
+
+        result = {
+            "encounter_id": encounter_id,
+            "prompt": prompt,
+            "texts": texts,
+            "responses_raw": responses,
+        }
+
+        if self.image_root and "image" in item:
+            img_path = os.path.join(self.image_root, item["image"])
+            image = Image.open(img_path).convert("RGB")
+            result["image"] = self.transform(image)
+
+        return result
+
+
+def medcon_collate_fn(batch):
+    encounter_ids = [b["encounter_id"] for b in batch]
+    prompts = [b["prompt"] for b in batch]
+    all_texts = [b["texts"] for b in batch]
+    all_responses = [b["responses_raw"] for b in batch]
+
+    result = {
+        "encounter_ids": encounter_ids,
+        "prompts": prompts,
+        "texts": all_texts,
+        "responses_raw": all_responses,
+    }
+
+    has_images = all("image" in b for b in batch)
+    if has_images:
+        result["images"] = torch.stack([b["image"] for b in batch])
+
+    return result
