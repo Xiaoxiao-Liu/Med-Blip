@@ -1,0 +1,9 @@
+backend: smoke
+train_file: data/demo/train.jsonl
+val_file: data/demo/val.jsonl
+image_root: "."
+batch_size: 4
+learning_rate: 0.003
+num_epochs: 3
+max_answer_length: 10
+output_dir: outputs

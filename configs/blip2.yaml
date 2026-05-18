@@ -1,0 +1,12 @@
+backend: blip2
+model_name: Salesforce/blip2-opt-2.7b
+train_file: data/demo/train.jsonl
+val_file: data/demo/val.jsonl
+image_root: "."
+batch_size: 2
+learning_rate: 0.00001
+num_epochs: 3
+max_answer_length: 10
+output_dir: outputs
+freeze_vision: true
+freeze_lm: true
