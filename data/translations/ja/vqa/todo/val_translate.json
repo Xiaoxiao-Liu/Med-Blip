@@ -1,0 +1,84 @@
+{
+  "prompt": "请将以下VQA（视觉问答）数据集中的\"question\"和\"answer\"字段从英文翻译成日语（日本語）。\n\n翻译要求：\n1. 只翻译\"question\"和\"answer\"两个字段的值，\"image\"字段保持不变\n2. 翻译要自然流畅，符合日语（日本語）的表达习惯\n3. 颜色名称和形状名称要使用日语（日本語）中最常用的对应词\n4. 保持JSON格式不变，每条数据一行（JSONL格式）\n\n翻译完成后，请将结果保存为JSONL格式（每行一个JSON对象），放入 data/translations/ja/vqa/done/val.jsonl\n\n以下是需要翻译的数据：",
+  "source_file": "data/demo/val.jsonl",
+  "target_file": "data/translations/ja/vqa/done/val.jsonl",
+  "language": "ja",
+  "language_name": "日语（日本語）",
+  "data": [
+    {
+      "image": "data/demo/images/sample_032.png",
+      "question": "What color is the object?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_071.png",
+      "question": "Describe the shape.",
+      "answer": "orange triangle"
+    },
+    {
+      "image": "data/demo/images/sample_065.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_005.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_001.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_002.png",
+      "question": "What color is the shape?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_054.png",
+      "question": "What color is the shape?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_011.png",
+      "question": "Describe the shape.",
+      "answer": "red triangle"
+    },
+    {
+      "image": "data/demo/images/sample_013.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_017.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_028.png",
+      "question": "What color is the object?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_031.png",
+      "question": "Describe the shape.",
+      "answer": "green square"
+    },
+    {
+      "image": "data/demo/images/sample_035.png",
+      "question": "Describe the shape.",
+      "answer": "green triangle"
+    },
+    {
+      "image": "data/demo/images/sample_003.png",
+      "question": "Describe the shape.",
+      "answer": "red circle"
+    },
+    {
+      "image": "data/demo/images/sample_014.png",
+      "question": "What color is the shape?",
+      "answer": "blue"
+    }
+  ]
+}

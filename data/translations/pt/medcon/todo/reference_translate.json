@@ -1,0 +1,62 @@
+{
+  "prompt": "请将以下医疗对话数据中的\"content_en\"字段内容从英文翻译成葡萄牙语（Português）。\n\n翻译要求：\n1. 将每个response中的\"content_en\"字段翻译成葡萄牙语（Português），翻译后的字段名改为\"content_pt\"\n2. 保留原有的\"content_en\"字段不变，新增\"content_pt\"字段\n3. 其他所有字段（encounter_id, author_id, completeness, contains_freq_ans等）保持不变\n4. 医学术语的翻译要准确专业，符合葡萄牙语（Português）医学文献的表达习惯\n5. 保持JSON格式不变\n\n翻译完成后，请将结果保存为JSON格式，放入 data/translations/pt/medcon/done/reference.json\n\n以下是需要翻译的数据：",
+  "source_file": "data/medcon/en/reference.json",
+  "target_file": "data/translations/pt/medcon/done/reference.json",
+  "language": "pt",
+  "language_name": "葡萄牙语（Português）",
+  "content_key_source": "content_en",
+  "content_key_target": "content_pt",
+  "data": [
+    {
+      "encounter_id": "ex_001",
+      "responses": [
+        {
+          "content_en": "Based on the symptoms described, this appears to be a case of contact dermatitis. I recommend applying a topical corticosteroid cream and avoiding the allergen. If symptoms persist, oral antihistamines may help reduce itching and inflammation.",
+          "author_id": "doc_01",
+          "completeness": 1.0,
+          "contains_freq_ans": 1.0
+        },
+        {
+          "content_en": "The rash and itching pattern suggest contact dermatitis. Treatment includes topical steroids and identification of the triggering allergen. Consider patch testing if the cause is unclear.",
+          "author_id": "doc_02",
+          "completeness": 1.0,
+          "contains_freq_ans": 0.0
+        }
+      ]
+    },
+    {
+      "encounter_id": "ex_002",
+      "responses": [
+        {
+          "content_en": "The persistent cough and fever may indicate pneumonia. A chest X-ray is recommended to confirm the diagnosis. Empirical antibiotic therapy with amoxicillin should be started while awaiting culture results.",
+          "author_id": "doc_01",
+          "completeness": 1.0,
+          "contains_freq_ans": 1.0
+        },
+        {
+          "content_en": "Given the symptoms of cough and high fever lasting more than a week, bacterial pneumonia should be considered. Recommend chest radiography and sputum culture. Start antibiotics promptly.",
+          "author_id": "doc_03",
+          "completeness": 0.0,
+          "contains_freq_ans": 1.0
+        }
+      ]
+    },
+    {
+      "encounter_id": "ex_003",
+      "responses": [
+        {
+          "content_en": "The blood glucose levels indicate type 2 diabetes. Lifestyle modifications including diet and exercise are the first line of treatment. Metformin is recommended as initial pharmacotherapy.",
+          "author_id": "doc_02",
+          "completeness": 1.0,
+          "contains_freq_ans": 1.0
+        },
+        {
+          "content_en": "Elevated fasting glucose and HbA1c confirm diabetes mellitus type 2. Begin with dietary counseling, regular physical activity, and metformin therapy. Monitor blood glucose regularly.",
+          "author_id": "doc_01",
+          "completeness": 1.0,
+          "contains_freq_ans": 1.0
+        }
+      ]
+    }
+  ]
+}

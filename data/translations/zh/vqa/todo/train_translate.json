@@ -1,0 +1,294 @@
+{
+  "prompt": "请将以下VQA（视觉问答）数据集中的\"question\"和\"answer\"字段从英文翻译成中文（简体中文）。\n\n翻译要求：\n1. 只翻译\"question\"和\"answer\"两个字段的值，\"image\"字段保持不变\n2. 翻译要自然流畅，符合中文（简体中文）的表达习惯\n3. 颜色名称和形状名称要使用中文（简体中文）中最常用的对应词\n4. 保持JSON格式不变，每条数据一行（JSONL格式）\n\n翻译完成后，请将结果保存为JSONL格式（每行一个JSON对象），放入 data/translations/zh/vqa/done/train.jsonl\n\n以下是需要翻译的数据：",
+  "source_file": "data/demo/train.jsonl",
+  "target_file": "data/translations/zh/vqa/done/train.jsonl",
+  "language": "zh",
+  "language_name": "中文（简体中文）",
+  "data": [
+    {
+      "image": "data/demo/images/sample_049.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_018.png",
+      "question": "What color is the shape?",
+      "answer": "blue"
+    },
+    {
+      "image": "data/demo/images/sample_030.png",
+      "question": "What color is the shape?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_046.png",
+      "question": "What color is the shape?",
+      "answer": "yellow"
+    },
+    {
+      "image": "data/demo/images/sample_007.png",
+      "question": "Describe the shape.",
+      "answer": "red square"
+    },
+    {
+      "image": "data/demo/images/sample_020.png",
+      "question": "What color is the object?",
+      "answer": "blue"
+    },
+    {
+      "image": "data/demo/images/sample_015.png",
+      "question": "Describe the shape.",
+      "answer": "blue circle"
+    },
+    {
+      "image": "data/demo/images/sample_033.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_052.png",
+      "question": "What color is the object?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_004.png",
+      "question": "What color is the object?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_036.png",
+      "question": "What color is the object?",
+      "answer": "yellow"
+    },
+    {
+      "image": "data/demo/images/sample_042.png",
+      "question": "What color is the shape?",
+      "answer": "yellow"
+    },
+    {
+      "image": "data/demo/images/sample_043.png",
+      "question": "Describe the shape.",
+      "answer": "yellow square"
+    },
+    {
+      "image": "data/demo/images/sample_048.png",
+      "question": "What color is the object?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_016.png",
+      "question": "What color is the object?",
+      "answer": "blue"
+    },
+    {
+      "image": "data/demo/images/sample_057.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_029.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_056.png",
+      "question": "What color is the object?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_068.png",
+      "question": "What color is the object?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_062.png",
+      "question": "What color is the shape?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_053.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_070.png",
+      "question": "What color is the shape?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_039.png",
+      "question": "Describe the shape.",
+      "answer": "yellow circle"
+    },
+    {
+      "image": "data/demo/images/sample_047.png",
+      "question": "Describe the shape.",
+      "answer": "yellow triangle"
+    },
+    {
+      "image": "data/demo/images/sample_023.png",
+      "question": "Describe the shape.",
+      "answer": "blue triangle"
+    },
+    {
+      "image": "data/demo/images/sample_055.png",
+      "question": "Describe the shape.",
+      "answer": "purple square"
+    },
+    {
+      "image": "data/demo/images/sample_025.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_008.png",
+      "question": "What color is the object?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_019.png",
+      "question": "Describe the shape.",
+      "answer": "blue square"
+    },
+    {
+      "image": "data/demo/images/sample_064.png",
+      "question": "What color is the object?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_051.png",
+      "question": "Describe the shape.",
+      "answer": "purple circle"
+    },
+    {
+      "image": "data/demo/images/sample_022.png",
+      "question": "What color is the shape?",
+      "answer": "blue"
+    },
+    {
+      "image": "data/demo/images/sample_063.png",
+      "question": "Describe the shape.",
+      "answer": "orange circle"
+    },
+    {
+      "image": "data/demo/images/sample_024.png",
+      "question": "What color is the object?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_060.png",
+      "question": "What color is the object?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_006.png",
+      "question": "What color is the shape?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_040.png",
+      "question": "What color is the object?",
+      "answer": "yellow"
+    },
+    {
+      "image": "data/demo/images/sample_059.png",
+      "question": "Describe the shape.",
+      "answer": "purple triangle"
+    },
+    {
+      "image": "data/demo/images/sample_009.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_050.png",
+      "question": "What color is the shape?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_021.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_027.png",
+      "question": "Describe the shape.",
+      "answer": "green circle"
+    },
+    {
+      "image": "data/demo/images/sample_010.png",
+      "question": "What color is the shape?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_000.png",
+      "question": "What color is the object?",
+      "answer": "red"
+    },
+    {
+      "image": "data/demo/images/sample_066.png",
+      "question": "What color is the shape?",
+      "answer": "orange"
+    },
+    {
+      "image": "data/demo/images/sample_037.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_067.png",
+      "question": "Describe the shape.",
+      "answer": "orange square"
+    },
+    {
+      "image": "data/demo/images/sample_058.png",
+      "question": "What color is the shape?",
+      "answer": "purple"
+    },
+    {
+      "image": "data/demo/images/sample_026.png",
+      "question": "What color is the shape?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_034.png",
+      "question": "What color is the shape?",
+      "answer": "green"
+    },
+    {
+      "image": "data/demo/images/sample_044.png",
+      "question": "What color is the object?",
+      "answer": "yellow"
+    },
+    {
+      "image": "data/demo/images/sample_041.png",
+      "question": "What shape is shown?",
+      "answer": "square"
+    },
+    {
+      "image": "data/demo/images/sample_045.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_012.png",
+      "question": "What color is the object?",
+      "answer": "blue"
+    },
+    {
+      "image": "data/demo/images/sample_069.png",
+      "question": "What shape is shown?",
+      "answer": "triangle"
+    },
+    {
+      "image": "data/demo/images/sample_061.png",
+      "question": "What shape is shown?",
+      "answer": "circle"
+    },
+    {
+      "image": "data/demo/images/sample_038.png",
+      "question": "What color is the shape?",
+      "answer": "yellow"
+    }
+  ]
+}

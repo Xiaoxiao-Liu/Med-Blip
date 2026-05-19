@@ -1,0 +1,35 @@
+{
+  "prompt": "请将以下医疗对话数据中的\"content_en\"字段内容从英文翻译成德语（Deutsch）。\n\n翻译要求：\n1. 将每个response中的\"content_en\"字段翻译成德语（Deutsch），翻译后的字段名改为\"content_de\"\n2. 保留原有的\"content_en\"字段不变，新增\"content_de\"字段\n3. 其他所有字段（encounter_id, author_id, completeness, contains_freq_ans等）保持不变\n4. 医学术语的翻译要准确专业，符合德语（Deutsch）医学文献的表达习惯\n5. 保持JSON格式不变\n\n翻译完成后，请将结果保存为JSON格式，放入 data/translations/de/medcon/done/prediction.json\n\n以下是需要翻译的数据：",
+  "source_file": "data/medcon/en/prediction.json",
+  "target_file": "data/translations/de/medcon/done/prediction.json",
+  "language": "de",
+  "language_name": "德语（Deutsch）",
+  "content_key_source": "content_en",
+  "content_key_target": "content_de",
+  "data": [
+    {
+      "encounter_id": "ex_001",
+      "responses": [
+        {
+          "content_en": "This looks like contact dermatitis. Apply topical corticosteroid cream to the affected area and try to identify and avoid the allergen causing the reaction. Antihistamines can help with itching."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ex_002",
+      "responses": [
+        {
+          "content_en": "The symptoms suggest possible pneumonia. I recommend a chest X-ray for diagnosis. Antibiotic treatment with amoxicillin should be considered while waiting for lab results."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ex_003",
+      "responses": [
+        {
+          "content_en": "The lab results are consistent with type 2 diabetes. Start with lifestyle changes including diet modification and exercise. Metformin is the first-line medication for blood glucose control."
+        }
+      ]
+    }
+  ]
+}
