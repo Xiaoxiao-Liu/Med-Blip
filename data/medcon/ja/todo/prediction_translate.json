@@ -1,0 +1,1120 @@
+{
+  "prompt": "请将以下医疗对话数据中的\"content_en\"字段内容从英文翻译成日语（日本語）。\n\n翻译要求：\n1. 将每个response中的\"content_en\"字段翻译成日语（日本語），翻译后的字段名改为\"content_ja\"\n2. 保留原有的\"content_en\"字段不变，新增\"content_ja\"字段\n3. 其他所有字段（encounter_id, author_id, completeness, contains_freq_ans等）保持不变\n4. 医学术语的翻译要准确专业，符合日语（日本語）医学文献的表达习惯\n5. 保持JSON格式不变\n\n翻译完成后，请将结果保存为JSON格式，放入 data/medcon/ja/prediction.json\n\n以下是需要翻译的数据：",
+  "source_file": "data/medcon/en/prediction.json",
+  "target_file": "data/medcon/ja/prediction.json",
+  "language": "ja",
+  "language_name": "日语（日本語）",
+  "content_key_source": "content_en",
+  "content_key_target": "content_ja",
+  "data": [
+    {
+      "encounter_id": "ENC00852",
+      "author_id": "U00295",
+      "image_ids": [
+        "IMG_ENC00852_00001.jpg",
+        "IMG_ENC00852_00002.jpg"
+      ],
+      "query_title_zh": "是白癜风吗，请看图",
+      "query_content_zh": "病人中年妇女，五十岁左右，手背部出现暗红色皮疹，逐渐演变成白斑，局部摩擦后发红，病人无自觉症状，但有精神病表现，分别按白癜风及湿疹治疗，病情逐渐加重，皮疹变大，一月后面部出现淡红色斑疹，无鳞屑，面部无照片，拒绝病理",
+      "query_title_en": "Is this Vitiligo?  Please see picture.",
+      "query_content_en": "The patient is a middle age female, about 50 years old. There are dark red rashes on the back of the hand.  They gradually turn into Leukoplakia, but would become reddish on rubbing locally.  Patient feels no specific symptoms, but exhibits problem mentally.  Treatment based on diagnosis as eczema and  Vitiligo.  However, the symptom is getting worse: rashes are getting bigger and there come macula in light red on the face one month later, without skin scales.  There is no picture for the face.  Patient refuses to take a pathological examination.",
+      "query_title_es": "¿Es vitíligo? Ver la foto.",
+      "query_content_es": "La paciente es una mujer de mediana edad, de unos 50 años. Presenta erupciones de color rojo oscuro en el dorso de la mano.  Se convierten gradualmente en leucoplasia, pero se tornan rojizas al frotar.  La paciente no siente síntomas específicos, pero presenta problemas mentales.  Tratamiento basado en el diagnóstico como eczema y vitíligo.  Sin embargo, el síntoma empeora: las erupciones aumentan de tamaño y un mes después aparecen máculas de color rojo claro en la cara, sin escamas cutáneas.  La paciente se niega a someterse a un examen patológico.",
+      "responses": [
+        {
+          "content_en": "Vitiligo"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00853",
+      "author_id": "U03852",
+      "image_ids": [
+        "IMG_ENC00853_00001.jpg",
+        "IMG_ENC00853_00002.jpg"
+      ],
+      "query_title_zh": "请各位帮忙看看这是什么皮肤病？",
+      "query_content_zh": "这病十多年了！都是反复，而且痒得很！部分抓到那，那都会发病！",
+      "query_title_en": "Please help take a look, what kind of skin disease is this?",
+      "query_content_en": "Suffering from the disease for more than 10 years.  It is recurrent and is vey itchy!  It happens wherever I scratch in some places.",
+      "query_title_es": "Agradecería ayuda, ¿qué enfermedad cutánea es ésta?",
+      "query_content_es": "Sufro la enfermedad desde hace más de 10 años.  Es recurrente y pica mucho.  Ocurre donde me rasco.",
+      "responses": [
+        {
+          "content_en": "It is chronic eczema."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00854",
+      "author_id": "U00067",
+      "image_ids": [
+        "IMG_ENC00854_00001.jpg",
+        "IMG_ENC00854_00002.jpg",
+        "IMG_ENC00854_00003.jpg"
+      ],
+      "query_title_zh": "顽固性皮损的诊治。",
+      "query_content_zh": "患者女性，53岁，农民。两年前无明显诱因左腕部出现分层状皮损，渐扩大，无瘙痒。他院诊断不名，曾外用：20%尿素软膏，去炎松尿素膏，恩肤霜等，效果欠佳。近期双手有轻度剥脱性表皮松解症。",
+      "query_title_en": "Diagnosis and Treatment of Stubborn skin lesions.",
+      "query_content_en": "The patient is a 53 female, farmer.  Two years ago, she got layered skin lesion on the left hand without any obvious cause.  It was not itchy, but spreading out.  The diagnosis by a hospital is not known.  Has used topically the followings: 20% Urea cream, Triamcinolone acetonide urea cream, Clobetasol Propionate Cream.  But they were not helpful.  Recently,  there is mild exfoliative epidermolysis on both hands.",
+      "query_title_es": "Diagnóstico y tratamiento de las lesiones cutáneas recalcitrantes.",
+      "query_content_es": "La paciente es una mujer de 53 años, agricultora. Hace dos años, sufrió una lesión cutánea en capas en la mano izquierda sin ninguna causa obvia. No picaba, sino que se extendía. Se desconoce el diagnóstico realizado por un hospital. Se ha utilizado tópicamente los siguientes: crema de urea al 20%, crema de urea con acetónido de triamcinolona, crema de propionato de clobetasol. Pero no fueron de ayuda. Recientemente, hay una epidermólisis exfoliativa leve en ambas manos.",
+      "responses": [
+        {
+          "content_en": "1. It needs a histology test to rule out eczema.\n2. Pathological diagnosis is needed to rule out fungus"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00855",
+      "author_id": "U00904",
+      "image_ids": [
+        "IMG_ENC00855_00001.jpg",
+        "IMG_ENC00855_00002.jpg"
+      ],
+      "query_title_zh": "常见病分享",
+      "query_content_zh": "患者：男，32岁。病程4天。",
+      "query_title_en": "Sharing a disease commonly seen",
+      "query_content_en": "Patient: male, 32 years old.  Got the disease for 4 days.",
+      "query_title_es": "Compartir una enfermedad frecuente",
+      "query_content_es": "Paciente: varón, 32 años. Tuve la enfermedad durante 4 días.",
+      "responses": [
+        {
+          "content_en": "Perhaps it's Mal de Deux mains."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00856",
+      "author_id": "U16656",
+      "image_ids": [
+        "IMG_ENC00856_00001.jpg"
+      ],
+      "query_title_zh": "是荨麻疹，还是其它的皮肤病？",
+      "query_content_zh": "是荨麻疹，还是其它的皮肤病，有好几年了一直没理不怎痒、不传染，前段时间看了皮肤科治疗后会痒了，打了穴注、打胸脉五肽、还开了药。是专业皮肤防止所看的不知怎好？",
+      "query_title_en": "Is this urticaria or some other skin disease?  ",
+      "query_content_en": "Is it urticaria or some other skin disease?  It has been there for a few years.  I haven't paid particular attention to it as it was not that itchy.  It is not contagious either.  Some time ago, I went to see a dermatologist for treatment.  After that, it becomes itchy.  I took injection at the acupoint and pentapeptide through the vein in the chest.  The treatment was made at the Professional Institute of Skin Protection.  I am not sure what I should do.",
+      "query_title_es": "¿Es urticaria u otra enfermedad cutánea?",
+      "query_content_es": "¿Es urticaria o alguna otra enfermedad de la piel?  Lleva ahí unos cuantos años.  No le he prestado especial atención porque no me picaba tanto.  Tampoco es contagiosa.  Hace algún tiempo, fui a ver a un dermatólogo para que me tratara.  Después de eso, empezó a picarme.  Me inyectaron en el punto de acupuntura y pentapéptido a través de la vena del pecho.  El tratamiento se hizo en el Instituto Profesional de Protección de la Piel.  No estoy segura de lo que debo hacer.",
+      "responses": [
+        {
+          "content_en": "The doctor has ruled out psoriasis, perhaps it is eczema."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00857",
+      "author_id": "U05867",
+      "image_ids": [
+        "IMG_ENC00857_00001.jpg",
+        "IMG_ENC00857_00002.jpg",
+        "IMG_ENC00857_00003.jpg",
+        "IMG_ENC00857_00004.jpg",
+        "IMG_ENC00857_00005.jpg"
+      ],
+      "query_title_zh": "请各位专家给看看。。。",
+      "query_content_zh": "请各位专家给看看   \n     患者，女，34岁。身上除了手足心外都是如图的花纹，已经有20几年了。而且越来越多！敬请各位专家给看看是什么病     怎么治疗！！谢谢！！！！！！！！！！！！！",
+      "query_title_en": "Would experts here please help take a look.",
+      "query_content_en": "Would experts here take a look.\nPatient is 34 years old, female.  There grows figure like pattern all over the body, with the exception of palms and soles.  Has been like that for 20 years, and growing more.  Would experts here take a look and advise what disease it is, and the treatment.  Thanks.",
+      "query_title_es": "¿Podrían los expertos echar un vistazo?",
+      "query_content_es": "Mujer de 34 años. Crece un patrón en forma de figura en todo el cuerpo, a excepción de las palmas y las plantas. Lleva 20 años así y sigue creciendo. ¿Podrían los expertos echar un vistazo y aconsejar qué enfermedad es y el tratamiento? Gracias.",
+      "responses": [
+        {
+          "content_en": "..."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00858",
+      "author_id": "U02052",
+      "image_ids": [
+        "IMG_ENC00858_00001.jpg",
+        "IMG_ENC00858_00002.jpg",
+        "IMG_ENC00858_00003.jpg",
+        "IMG_ENC00858_00004.jpg"
+      ],
+      "query_title_zh": "帮忙看看这是什么病",
+      "query_content_zh": "男性，有糖尿病，不痒，有时候有点痛，干开始是红色的丘疹，慢慢上面就起来泡，弄破后流出来些黑色的血水",
+      "query_title_en": "Please help see what disease this is.",
+      "query_content_en": "Male, diabetic.  It is not itchy, but sometimes painful.  Starting as a red papule, and slowly forming a blister on the top.  Got red fluid with blood discharge after poking it open.",
+      "query_title_es": "¿Qué enfermedad es ésta, por favor?",
+      "query_content_es": "Varón, diabético.  No pica, pero a veces duele.  Empieza como una pápula roja, y poco a poco se forma una ampolla en la parte superior.  Tiene líquido rojo con secreción de sangre al pincharla.",
+      "responses": [
+        {
+          "content_en": "Nodular prurigo, take Victoria'spunitivepaste for安宁."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00859",
+      "author_id": "U16330",
+      "image_ids": [
+        "IMG_ENC00859_00001.png",
+        "IMG_ENC00859_00002.jpg"
+      ],
+      "query_title_zh": "皮肤骚痒",
+      "query_content_zh": "背部皮肤骚痒，斑丘疹，7天，夜里比较痒，左肩甲骨上方有一淋巴结，不痛，请教各位是什么病？谢谢！",
+      "query_title_en": "Itchiness at Skin",
+      "query_content_en": "The skin on the back of the body is itchy.  Maculopapule. 7 days.  It is more itchy at night.  There is a lymph node on the upper side of the left shoulder blade.  There is no pain associated with it.  Would like to know what disease it is.  Thanks a lot.",
+      "query_title_es": "Picor en la piel",
+      "query_content_es": "Picor en la piel de la parte posterior del cuerpo.  Maculopápula. 7 días.  Pica más por la noche.  Hay un ganglio linfático en la parte superior del omóplato izquierdo.  No hay dolor asociado.  Quisiera saber de qué enfermedad se trata.  Muchas gracias.",
+      "responses": [
+        {
+          "content_en": "Possibility of drug rash"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00860",
+      "author_id": "U04397",
+      "image_ids": [
+        "IMG_ENC00860_00001.jpg"
+      ],
+      "query_title_zh": "关于湿疹、汗疱疹，求诊断",
+      "query_content_zh": "手上湿疹、汗疱疹从10年至今，反复发作，痛苦啊，望各路医生给看看。以下是记录：\n工作历程：09年6月毕业，之后工作，因工作需要接触低浓度盐酸，盐酸在槽内，用来洗去金属表面铁锈，操作过程无手套等保护，直接接触盐酸，同时双手参与体力活动，经常直接接触工业油污。10年3月后换单位，一直在办公室，偶尔接\n触金属，不好判断是否金属过敏引起。\n病症：双手手掌侧皮层内有泡，很痒，抓破后流出谈黄色液体，越抓越痒，皮损后结壳，皮肤变硬、脱屑。夏天多发、冬季减缓。\n用药记录：\n1、地级市皮肤医院诊断为湿疹、汗疱疹，用药醋酸铝粉末冲调后泡后，外用曲咪新乳膏，用后效果不明显。\n2、自用药水杨酸浸泡，效果不明显，类似用药记录5。\n3、自用复方酮康唑软膏，效果不明显。\n4、县级市一医院诊断汗疱疹，用药硼酸浸泡、内服氯雷他定和百癣夏塔热片、外用尿素软膏一周后改用一种软膏，具体忘记了，好像是抗真菌的，同时医生开有复方樟脑乳膏，说痒的时候用。这一套下来之后不痒了，连喝酒之后都只有轻微的痒。不过半年后复发。\n5、自用足光散+皮康王。足光散浸泡间隔一晚一次，昨天浸泡第4次。浸泡后痒的症状减轻了许多，手上脱皮、干燥，外用皮康王。效果感觉也不是很理想。\n以上用药记录至少互相间隔2各月以上。各位大神，有没有好点的方法，跪求了。这病好烦人哎。\n本人抽烟，不喜酒（陪领导的时候是没办法），爱吃各种**、辛辣，因为双手这样，也忌口了很多，哎。\n以下图片是网上找到的，跟我手上差不多，我手上厚皮、脱屑面积比他大一些，天热的时候摸明显摸到皮下有很多泡，有点痒，越抓越痒的那种。",
+      "query_title_en": "Related to Eczema, pompholyx.  Request for diagnosis.",
+      "query_content_en": "Suffering eczema and epompholyx at hands from the year of 2010.  It is attacking me recurrently.  Very painful.  Hope that physicians from all places could take a look.  Following is the history:-\n\nWork History:  Graduated in June, 2009.  Start working after that.  Work requires contact with  hydrochloric acid with low concentration inside a trench.  It is used to clean the oxidized surface of metal.  There is no use of protective gloves durig the process, and has direct contact with the hydrochloric acid.  Both hands are involved in the physical work, have direct contact with industrial grease.  Change of work place in March 2010.  Working in the office there, with occasional contact with metal.  Not sure it is caused by allergy with metal.\n\nSymptoms:  Blisters on the sides of both palms.  Very itchy.  If broken after scratching, liquid of light yellow in color is flowing out.  The more I scratch, the more is the itching.  Scab is forming after lesions.  Skin turns hard and starts shredding.  Mostly happening in Summer;  less serious in Winter.\n\nMedical History:\n1.  Diagnosis as eczema and epompholyx at the Dermatology Department of a local hospital.  Treatment is:  soaking in diluted Aluminum acetate solution, and topical use of Triamcinolone Acetonide Acetate and Miconazole Nitrate Neomycin Sulfate Cream.  No improvement after using them.\n2. Soaking in salicylic acid solution by myself.  Effect is not obvious.  Have tried that 5 times.\n3.  Topical use of Ketoconazole Ointment by myself.  Effect is not obvious.\n4.  Diagnosis as epompholyx at a county level hospital. Treatment: Soaking in boric acid solution; oral use of Loratadine and XTR (Xiatare) tablets; Topical use of Urea ointment for one week.  After that change to another antifungal ointment which I don't recall the name. Also prescribed by the physician at the time is Compound Camphor Cream for use when itchy.  With all these, I don't feel itchy at all.  Even if I drink alcohol, the itchiness is still very minimal.  Unfortunately the problem comes back afte 6 months.\n5. Soaking in Zuguang Powder+Pikangwang (A chinese herbal medicine containing Ketoconazole) every other night.  Yesterday was the 4 times.  The symptom is relieving a bit.  Skin is shredding, and becoming dry.  Topical use of Pikangwang is not very effective.\n\nEach of the treatment and use of medications mentioned above is spaced at least 2 months apart.  I would be very grateful if you guys can offer any help.  The disease is so troublesome to me.\nI smoke, and not particularly fond of drinking alcohol (except when I accompany my boss on events).  I am fond of eating spicy food.  However, because of the problem on my hands, I have cut back most of it.  The pictures below are downloaded from the internet.  My situations are quite similar to them.  My skin is thicker, and the area of skin shredding is also bigger as well.  When the weather is warm, I can feel there are numerous blisters below the skin.  It is itchy, more so if I scratch it.\n\n\n",
+      "query_title_es": "Relacionado con eccema, dishidrosis. Solicito diagnóstico.",
+      "query_content_es": "Sufriendo eczema y dishidrosis en las manos desde el 2010. Con ataques recurrentes, muy dolorosos. A ver si los médicos pueden echar un vistazo. \nHistoria laboral: Graduado en junio del 2009. Empecé a trabajar después. El trabajo requiere contacto con ácido clorhídrico de baja concentración dentro de una zanja. Se utiliza para limpiar la superficie oxidada del metal. No hay uso de guantes de protección durante el proceso, y existe contacto directo con el ácido clorhídrico. Ambas manos están implicadas en el trabajo físico, en contacto directo con grasa industrial. Cambio de puesto de trabajo en marzo de 2010. Trabajo en la oficina allí, con contacto ocasional con metal. No estoy seguro de que se deba a alergia al metal.\n\nSíntomas: Ampollas muy pruriginosas en los costados de ambas palmas. Si se rompen después de rascarlas, sale un líquido de color amarillo claro. Cuanto más me rasco, mayor es el picor. Se forma costra después de las lesiones. La piel se endurece y empieza a desgarrarse. Ocurre sobre todo en verano; es menos grave en invierno.\n\nHistoria clínica:\n\n1. Diagnóstico de eczema y dishidrosis en el Departamento de Dermatología de un hospital local. El tratamiento es: remojo en solución diluida de acetato de aluminio, y uso tópico de acetato de triamcinolona y crema de sulfato de neomicina y nitrato de miconazol. Sin mejoría tras su uso.\n2. Remojo en solución de ácido salicílico por mí mismo. El efecto no es evidente. Lo he intentado 5 veces.\n3. Uso tópico de pomada de ketoconazol. El efecto no es evidente.\n4. Diagnóstico como dishidrosis en un hospital de nivel del condado. Tratamiento: Remojo en solución de ácido bórico; uso oral de comprimidos de loratadina y XTR (Xiatare); uso tópico de pomada de urea durante una semana. Después cambio a otra pomada antifúngica de la que no recuerdo el nombre. También me recetó el médico en ese momento crema de alcanfor compuesto para usar cuando hay picor. Con todo esto, no siento picor en absoluto. Incluso si bebo alcohol, el picor sigue siendo mínimo. Desgraciadamente el problema vuelve después de 6 meses.\n5. Remojo en polvo zuguang+pikangwang (una medicina herbal china que contiene ketoconazol) cada dos noches. Ayer fue la cuarta vez. El síntoma se está aliviando un poco. La piel se está deshaciendo y se está secando. El uso tópico de pikangwang no es muy eficaz.\n\nCada uno de los tratamientos y uso de medicamentos mencionados anteriormente están espaciados al menos 2 meses. Estaría muy agradecido si pueden ofrecerme alguna ayuda. La enfermedad me resulta muy molesta.\nFumo, y no soy especialmente aficionado a beber alcohol (excepto cuando acompaño a mi jefe en eventos). Soy aficionado a comer comida picante, pero he reducido el consumo debido al problema que tengo en las manos. Las fotos de abajo están descargadas de internet. Mi situación es bastante parecida. Mi piel es más gruesa, y el área de piel desgarrada también es mayor. Cuando hace calor, noto que hay numerosas ampollas debajo de la piel. Me pica, y más si me rasco.\n",
+      "responses": [
+        {
+          "content_en": "Hsv has been ruled out, try applying Huangqin San on it."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00861",
+      "author_id": "U12638",
+      "image_ids": [
+        "IMG_ENC00861_00001.jpg",
+        "IMG_ENC00861_00002.jpg"
+      ],
+      "query_title_zh": "帮忙看看嘴巴周围的痘痘，谢谢",
+      "query_content_zh": "最近两三个月嘴巴一直长痘痘，层出不穷，一个没下去又长一个，脖子上也也有两个，有人说是妇科有问题，各位帮忙看看，怎么治疗就好了",
+      "query_title_en": "Please help see the acnes around the mouth.  Thanks.",
+      "query_content_en": "Having acnes near the mouth for the past 2 to 3 months.  They are coming out unstoppingly.  One coming out before the other one subsides.  There are two now on my neck.  Some people said this is OBGYN problem  Could people here take a look and advise the treatement needed. ",
+      "query_title_es": "Ayuda con los granos de alrededor de la boca, por favor.",
+      "query_content_es": "Tengo granos cerca de la boca desde hace 2 o 3 meses. Salen sin parar. Uno sale antes de que el otro disminuya. Ahora tengo dos en el cuello. Hay gente que dice que es un problema de ginecología, ¿podrían echarle un vistazo y aconsejarme el tratamiento que necesito?",
+      "responses": [
+        {
+          "content_en": "Pimple: Need to rule out for acne vulgaris and contagious papulopustular disease."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00862",
+      "author_id": "U13154",
+      "image_ids": [
+        "IMG_ENC00862_00001.jpg",
+        "IMG_ENC00862_00002.jpg",
+        "IMG_ENC00862_00003.jpg",
+        "IMG_ENC00862_00004.jpg",
+        "IMG_ENC00862_00005.jpg",
+        "IMG_ENC00862_00006.jpg"
+      ],
+      "query_title_zh": "看图，是手指“粘液样囊肿”吗？",
+      "query_content_zh": "-\n拇指上，有8年了，不痛不痒，知觉正常，1cm x 1cm 大小，压迫指甲成波浪状。是不是“粘液样囊肿”呢？\n-",
+      "query_title_en": "See picture.  Is this Mucoid cyst?",
+      "query_content_en": "It happens on the thumb, for 8 years already.  It is not itchy or painful.  It doesn't affect the sense there.  The size is 1 cm X 1 cm.  The nail has been deformed to a wavy shape becasue of the pressing.  Is this myxoid cyst?",
+      "query_title_es": "Ver foto. ¿Es un quiste mucoide?",
+      "query_content_es": "Ocurre en el pulgar, desde hace ya 8 años.  No pica ni duele.  No afecta al sentido del tacto.  El tamaño es de 1 cm X 1 cm.  La uña se ha deformado en forma ondulada debido a la presión.  ¿Se trata de un quiste mixoide?",
+      "responses": [
+        {
+          "content_en": "The skin's growth ring."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00863",
+      "author_id": "U16166",
+      "image_ids": [
+        "IMG_ENC00863_00001.jpg",
+        "IMG_ENC00863_00002.jpg",
+        "IMG_ENC00863_00003.jpg",
+        "IMG_ENC00863_00004.jpg",
+        "IMG_ENC00863_00005.jpg",
+        "IMG_ENC00863_00006.jpg",
+        "IMG_ENC00863_00007.jpg",
+        "IMG_ENC00863_00008.jpg",
+        "IMG_ENC00863_00009.jpg",
+        "IMG_ENC00863_00010.jpg",
+        "IMG_ENC00863_00011.jpg",
+        "IMG_ENC00863_00012.jpg",
+        "IMG_ENC00863_00013.jpg",
+        "IMG_ENC00863_00014.jpg",
+        "IMG_ENC00863_00015.jpg",
+        "IMG_ENC00863_00016.jpg"
+      ],
+      "query_title_zh": "大家看看这个是湿疹还是皮炎？",
+      "query_content_zh": "请各位学长帮忙看看，这红斑究竟是什么，主要生长在后背、臀部，还有大腿外侧部有没有办法医治。。。找单位的人看了看说是皮炎不知道对不对，用了派瑞松效果很好，但是一片下去了另一片又起来啦。。学姐学长帮忙给看看，最好出个方子。。",
+      "query_title_en": "Please take a look, is this eczema or dermatitis?",
+      "query_content_en": "Would expert here help take a look.  What is the red spot here?  Mainly grow on the back of the body, buttock, and the outer side of the thigh.  Is there any way to treat it....  Have asked people in the company, who said that it is dermatitis.  Not sure if this is true or not.  The effect is pretty good with the use of Pevisone.  However, one patch is coming up when the other one is subsiding.  Would senior expert here help see it, and provide a treatment plan.",
+      "query_title_es": "Si podéis observar, ¿se trata de eccema o de dermatitis?",
+      "query_content_es": "¿Podría un experto ayudar? ¿Qué es esta mancha roja?  Principalmente crece en la parte posterior del cuerpo, las nalgas y el lado exterior del muslo.  ¿Hay alguna manera de tratarla? He preguntado a la gente en la empresa, que dijo que es dermatitis.  No estoy seguro de si es cierto o no.  El efecto es bastante bueno con el uso de Pevisone.  Sin embargo, un parche aumenta cuando el otro disminuye.  ¿Podría evaluarlo un dermatólogo y proporcionar un plan de tratamiento?",
+      "responses": [
+        {
+          "content_en": "If it is a herpes infection, you can use antiviral medication. If not, topical glycerin and iodine lotion should do the trick."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00864",
+      "author_id": "U20292",
+      "image_ids": [
+        "IMG_ENC00864_00001.jpg"
+      ],
+      "query_title_zh": "这是什么快快快看看？急急",
+      "query_content_zh": "这几天忽然全身痒，哪里抓哪里痒，抓完就起风团？怎么回事？是什么裤带一直都会，就这几天",
+      "query_title_en": "What is this?  Can you look into it quickly?  Urgent.",
+      "query_content_en": "It is itchy all over the body these few days.  Wherever I scratch, it would become itchy, and forming hives.  What is the problem?  I have this problem for all kinds of trouser belts.  Only these few days.",
+      "query_title_es": "¿Qué es ésto? ¿Podéis mirarlo pronto? Urgente.",
+      "query_content_es": "Estos días me pica todo el cuerpo.  Dondequiera que me rasco, me pica y se forman ronchas.\n  ¿Cuál es el problema?  Tengo este problema con todo tipo de cinturones.  Sólo estos días.",
+      "responses": [
+        {
+          "content_en": "Considering Allergies"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00865",
+      "author_id": "U15671",
+      "image_ids": [
+        "IMG_ENC00865_00001.jpg",
+        "IMG_ENC00865_00002.jpg"
+      ],
+      "query_title_zh": "请问这是什么皮肤病",
+      "query_content_zh": "中年男性，无药物食物过敏史，项背部枕后部反复出现，请问这是什么皮肤病？用什么药治疗，能否根治？",
+      "query_title_en": "Please advise what kind of skin disease is this.",
+      "query_content_en": "Middle aged male.  No history of allergy on food.  Recurrent on the back of the neck.  What disease is it?  What kinds of medicine is needed?  Can it be cured?",
+      "query_title_es": "Por favor, indíqueme de qué tipo de enfermedad cutánea se trata.",
+      "query_content_es": "Varón de mediana edad.  Sin antecedentes de alergia alimentaria.  Recurrente en la nuca.  ¿De qué enfermedad se trata?  ¿Qué tipo de medicamento se necesita?  ¿Se puede curar?",
+      "responses": [
+        {
+          "content_en": "Spackle dermatitis."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00866",
+      "author_id": "U00085",
+      "image_ids": [
+        "IMG_ENC00866_00001.jpg",
+        "IMG_ENC00866_00002.jpg"
+      ],
+      "query_title_zh": "",
+      "query_content_zh": "女，54岁，双手掌皮疹8年",
+      "query_title_en": "",
+      "query_content_en": "Female, 54 years old.  Rashes on both palms for 8 years.",
+      "query_title_es": "",
+      "query_content_es": "Mujer, 54 años. Erupciones en ambas palmas desde hace 8 años.",
+      "responses": [
+        {
+          "content_en": "Comprehensive treatment, antifungal drugs + glucocorticoids."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00867",
+      "author_id": "U01374",
+      "image_ids": [
+        "IMG_ENC00867_00001.jpg",
+        "IMG_ENC00867_00002.jpg",
+        "IMG_ENC00867_00003.jpg",
+        "IMG_ENC00867_00004.jpg",
+        "IMG_ENC00867_00005.jpg"
+      ],
+      "query_title_zh": "大家讨论!",
+      "query_content_zh": "病史一年,纹身后出现.时有 分泌物流出!",
+      "query_title_en": "Please discuss.",
+      "query_content_en": "Medical history for one year.  It happened after taking tattoo.  There is discharge coming out at times.",
+      "query_title_es": "Por favor, opinen.",
+      "query_content_es": "Historial médico durante un año.  Sucedió después de tatuaje.  A veces salen secreciones.",
+      "responses": [
+        {
+          "content_en": "The diagnosis is fairly clear. Is it possible to do a pathology test?"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00868",
+      "author_id": "U00209",
+      "image_ids": [
+        "IMG_ENC00868_00001.jpg",
+        "IMG_ENC00868_00002.jpg"
+      ],
+      "query_title_zh": "皮肤病",
+      "query_content_zh": "男性,双小腿皮疹反复四年,痒,不痛,无水肿.\n考虑:色素性紫癜性皮病",
+      "query_title_en": "Skin Disease.",
+      "query_content_en": "The patient is male.  Got rashes on both lower legs for 4 years.  Recurrent, itchy but not painful.  There is no edema.  Considering: Pigmentary purpuric dermatosis.",
+      "query_title_es": "Enfermedad cutánea.",
+      "query_content_es": "Paciente varón. Tuvo erupciones en ambas piernas durante 4 años. Recurrente, con picazón pero no dolorosa. No hay edema. Considerando: Dermatosis purpúrica pigmentaria.",
+      "responses": [
+        {
+          "content_en": "Pigmented Purpuric Dermatitis\nIt is suggested to take a blood thinning and anti-inflammatory treatment, as well as combined topical use of lidocaine cream."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00869",
+      "author_id": "U12249",
+      "image_ids": [
+        "IMG_ENC00869_00001.jpg"
+      ],
+      "query_title_zh": "外耳道生疮，结痂，渗液",
+      "query_content_zh": "最初是掏耳朵划伤了外耳道，当时是夏天，每天洗澡打湿了伤口，一直都没有长好，后来慢慢的像口角疮一样，渗液，结痂，还伴有瘙痒，然后老是去用手指甲扣，扣掉了痂皮就流血水，如此循环，一年多了，对工作生活造成诸多不便。去过三次医院，全给我做中耳炎治疗，吃了几百元的药物，没一点作用。后来听朋友介绍用了“哈西奈德溶液”，用了三五天就好了，但是一星期后又复发了。然后又用哈西奈德半个月好了，停药一星期又复发了，然后有用了哈西奈德接近两个月，停药后一星期又复发了，就是现在这样。。。现在茫然了，不知道还怎么治疗了，跪求医师解答，，，",
+      "query_title_en": "Sore at the External auditory canal, getting scabbed with discharge.",
+      "query_content_en": "It started first as scoring at the external auditory canal when cleaning / picking the ear.  It was summer back then.  The lesion got wet everyday when bathing, and hence did not heal.  Later on, it gradually deteriorates like oral sores: has discharge, scabs, and with itchiness.  With repeated scratching by fingers, the scab comes off, then starts bleeding.  It has been one year like this, happening recurrently and causing a lot of inconvenience to my daily life.  Have gone to hospital three times, and was given out treatment as Otitis media. It does not help even after spending a few hundred dollars on medications.  After advice from friends, I use Halcinonide Solution.  After using it for 3 to 5 days, the disease got healed.  But it comes back after a week.  With the use of Halcinonide Solution again for half a month, the problem is gone, but relapses a week after stopping the solution.  This repeats again after use of another 2 months.  Now I am at a loss, and don’t know how to deal with it.  Would like to ask experts for help.",
+      "query_title_es": "Úlceras, costras y supuración del conducto auditivo externo.",
+      "query_content_es": "Empezó como una punzada en el conducto auditivo externo al limpiar / hurgar el oído. Por aquel entonces era verano. \nLa lesión se mojaba todos los días al bañarse, por lo que no se curaba. Más tarde, se fue deteriorando gradualmente como las úlceras bucales: tiene secreción, costras y pica. Al rascarse repetidamente con los dedos, la costra se desprende y luego empieza a sangrar. Llevo un año así, ocurriendo recurrentemente y causando muchas molestias a mi vida diaria. He ido tres veces al hospital y me han tratado como otitis media. No ayuda incluso después de gastar unos cientos de dólares en medicamentos. Siguiendo el consejo de unos amigos, utilicé halcinonida en solución. Después de usarla durante 3 a 5 días, la lesión se curó, pero reapareció al cabo de una semana. Con el uso de solución de halcinonida de nuevo durante medio mes, el problema desaparece, pero recae una semana después de dejar la solución. Esto se repite de nuevo después del uso de otros 2 meses. Ahora estoy perdido y no sé cómo solucionarlo. Me gustaría pedir ayuda a los expertos.",
+      "responses": [
+        {
+          "content_en": "Candidiasis? Try using some antifungal ointment, and apply it to the affected area regularly."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00870",
+      "author_id": "U06370",
+      "image_ids": [
+        "IMG_ENC00870_00001.jpg",
+        "IMG_ENC00870_00002.jpg",
+        "IMG_ENC00870_00003.jpg",
+        "IMG_ENC00870_00004.jpg",
+        "IMG_ENC00870_00005.jpg",
+        "IMG_ENC00870_00006.jpg"
+      ],
+      "query_title_zh": "求助 这是什么疹子",
+      "query_content_zh": "最近几天发生，瘙痒，有的地方都抓破了，主要集中\n在四肢，家里有猫，不知是不是它传的什么，这几天\n暴雨，路上的车停了，进不了城了，我在这里肯请专\n家看看，谢谢你了！！！！",
+      "query_title_en": "Request assistance:  What kind of rash is this?",
+      "query_content_en": "It happens recently for a few days.  It is itchy, and torn up after scratching. It mainly concentrate in the limbs.  I have cat in the house and I am not sure if the problem was spread from the cat.  It has been raining heavily these days and I am not able to get into the city because of transport problems.  I would like to have experts here to take a look on it.  Thank you very much.",
+      "query_title_es": "Solicito ayuda: ¿Qué tipo de erupción es ésta?",
+      "query_content_es": "Ocurre desde hace unos días.  Pica y se desgarra al rascarse. Se concentra principalmente en las extremidades.  Tengo un gato en casa y no estoy seguro de si el problema lo ha contagiado el gato.  Estos días ha llovido mucho y no puedo ir a la ciudad por problemas de transporte.  Me gustaría que los expertos echaran un vistazo.  Muchas gracias.",
+      "responses": [
+        {
+          "content_en": "Ringworm can cause this type of rash, so you need to check for ringworms."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00871",
+      "author_id": "U06696",
+      "image_ids": [
+        "IMG_ENC00871_00001.jpg",
+        "IMG_ENC00871_00002.jpg",
+        "IMG_ENC00871_00003.jpg"
+      ],
+      "query_title_zh": "遗传性皮肤病请大家诊治",
+      "query_content_zh": "患者父亲有这样的皮肤病，有轻微的瘙痒：",
+      "query_title_en": "hereditary skin diseases:  Could the community here please help on diagnosis and treatment of it.",
+      "query_content_en": "The patient's father also has this disease.  Mildy itchy.",
+      "query_title_es": "enfermedades hereditarias de la piel:  ¿podéis ayudar en el diagnóstico y tratamiento?",
+      "query_content_es": "El padre del paciente también padece esta enfermedad.  Picazón leve.",
+      "responses": [
+        {
+          "content_en": "Like genetic skin disease, I have read it in the literature."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00872",
+      "author_id": "U01661",
+      "image_ids": [
+        "IMG_ENC00872_00001.jpg",
+        "IMG_ENC00872_00002.jpg"
+      ],
+      "query_title_zh": "看图识病",
+      "query_content_zh": "女22岁，唇部黑斑10年，无痛痒。既往身体健康，无内科疾病。肠镜检查未见肠道息肉。",
+      "query_title_en": "See picture for disease",
+      "query_content_en": "Female, 22 years old.  Got black spot at the lip. Not itchy.  Has been healthy all along.  There is no disease internally.  There is no  intestinal polyps with Colonoscopy.",
+      "query_title_es": "Ver foto para diagnóstico.",
+      "query_content_es": "Mujer, 22 años, sana. Mancha negra en el labio, no pruriginosa. No otras enfermedades. La colonoscopia no ha detectado pólipos intestinales.",
+      "responses": [
+        {
+          "content_en": "Lip光伏肾可以治疗"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00873",
+      "author_id": "U14075",
+      "image_ids": [
+        "IMG_ENC00873_00001.jpg",
+        "IMG_ENC00873_00002.jpg",
+        "IMG_ENC00873_00003.jpg"
+      ],
+      "query_title_zh": "请问这个是灰指甲吗？",
+      "query_content_zh": "以前没什么感觉，现在冬天穿鞋有时会痛，请问怎么处理？能治好吗？只有大拇趾的半个趾甲是这样，其他的都不会",
+      "query_title_en": "May I ask if this is onychomycosis?",
+      "query_content_en": "There was not much feeling before.  Now would be painful at times when taking on shoes in winter.  Please advise how to treat this.  Could it be cured?  This happens only in half of the toe nail on the big toe.  Not with the others.",
+      "query_title_es": "¿Creéis que es onicomicosis?",
+      "query_content_es": "Antes no sentía nada, pero ahora me duele a veces en invierno cuando llevo zapatos. ¿Se puede curar? Sólo la mitad de la uña del dedo gordo está así, el resto no",
+      "responses": [
+        {
+          "content_en": "Considering nail fungus, take Antifungal Medication."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00874",
+      "author_id": "U01112",
+      "image_ids": [
+        "IMG_ENC00874_00001.jpg",
+        "IMG_ENC00874_00002.jpg"
+      ],
+      "query_title_zh": "求教",
+      "query_content_zh": "右侧脚趾.脚背有渗出，边缘有溃疡。有接触朔料鞋史。不痒。如图，望大神指教。并加以治疗。谢谢。",
+      "query_title_en": "Assistance is requested.",
+      "query_content_en": "On the right side of the toe.  There is discharge from the top of the foot.  Ulcer at the edge.  Have contact history with plastic shoes.  Not itchy.  See picture.  Hope that experts here can provide advice and treatment needed.  Thanks a lot.",
+      "query_title_es": "Necesito ayuda.\n\n\n",
+      "query_content_es": "En el lado derecho del dedo del pie.  Hay secreción en la parte superior del pie.  Úlcera en el borde.  Tiene antecedentes de contacto con zapatos de plástico.  No pica.  Ver foto.  Espero que los expertos puedan proporcionar asesoramiento y el tratamiento necesario.  Muchas gracias.",
+      "responses": [
+        {
+          "content_en": "Check if there is infection."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00875",
+      "author_id": "U07372",
+      "image_ids": [
+        "IMG_ENC00875_00001.jpg"
+      ],
+      "query_title_zh": "看图识病",
+      "query_content_zh": "三岁小儿皮损，无明显痒感",
+      "query_title_en": "See picture for the disease",
+      "query_content_en": "Skin lesions on a 3 years old infant.  Not itchy.",
+      "query_title_es": "Ver foto para diagnóstico.",
+      "query_content_es": "Lesiones cutáneas en un niño de 3 años.  No pica.",
+      "responses": [
+        {
+          "content_en": "1. The image seems to show some scarring, but no scaliness is observed. This suggests that it might be a case of eczema or psoriasis rather than a sunburn. 2. Whether or not the child has skin lesions in addition to an allergy test, I would recommend doing a blood test for allergies."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00876",
+      "author_id": "U00209",
+      "image_ids": [
+        "IMG_ENC00876_00001.jpg",
+        "IMG_ENC00876_00002.jpg"
+      ],
+      "query_title_zh": "讨论7:男,33岁,双手皮疹三年",
+      "query_content_zh": "男,33岁,双手皮疹三年,反复,痒.",
+      "query_title_en": "Discussion 7:  Male, 33 years old.  Bilateral hand skin rash for 3 years.",
+      "query_content_en": "Male, 33 years old.  Rashes on both hands for 3 years.  Recurrent and is itchy.",
+      "query_title_es": "Discusión 7: Varón, 33 años.  Erupción cutánea bilateral en manos desde hace 3 años.",
+      "query_content_es": "Varón, 33 años.  Erupciones en ambas manos desde hace 3 años.  Recurrente y con picor.",
+      "responses": [
+        {
+          "content_en": "所有手的指关节都有变白，变软的症状。我想知道是缺乏什么引起的，维生素B族？"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00877",
+      "author_id": "U12919",
+      "image_ids": [
+        "IMG_ENC00877_00001.jpg"
+      ],
+      "query_title_zh": "求慢性寻麻疹根治的方法",
+      "query_content_zh": "小儿7周岁。皮肤病寻麻疹好多年了。去了很多医院也不能根治。求有没有办法",
+      "query_title_en": "Request for the treatment to cure chronic urticaria.",
+      "query_content_en": "My son is 7 years old.  Have urticaria for many years.  Been to many hospitals and can not be eradicted completely.  Requesting any ideas.",
+      "query_title_es": "¿Podéis darme un tratamiento que cure la urticaria crónica?",
+      "query_content_es": "Mi hijo de 7 años tiene urticaria desde hace muchos años. Ha estado en muchos hospitales y no se puede erradicar por completo. ¿Algún consejo?",
+      "responses": [
+        {
+          "content_en": "The treatment of chronic urticaria largely depends on the cause. It is recommended to find out what causes it first, whether it's environmental factors or food allergies. If it's a skin disease, it can be treated with topical ointment for allergic dermatitis, and systemic antihistamines can also be taken."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00878",
+      "author_id": "U00162",
+      "image_ids": [
+        "IMG_ENC00878_00001.jpg",
+        "IMG_ENC00878_00002.jpg",
+        "IMG_ENC00878_00003.jpg"
+      ],
+      "query_title_zh": "三个月前的病人",
+      "query_content_zh": "女性，60多岁。冬天加重，夏天消失。下肢没有。就手部有。",
+      "query_title_en": "Patient from 3 months ago.",
+      "query_content_en": "Female, 60+ years old.  More serious in winter, subsiding in summer.  Only happens at hands, not lower limbs.",
+      "query_title_es": "Paciente de hace 3 meses.",
+      "query_content_es": "Mujer, 60+ años. Más grave en invierno y remitente en verano. Sólo ocurre en las manos, no en las extremidades inferiores.",
+      "responses": [
+        {
+          "content_en": "Onychomycosis, moist hypothermia."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00879",
+      "author_id": "U09537",
+      "image_ids": [
+        "IMG_ENC00879_00001.jpg",
+        "IMG_ENC00879_00002.jpg",
+        "IMG_ENC00879_00003.jpg"
+      ],
+      "query_title_zh": "请高手看看这个到底是什么样的病。",
+      "query_content_zh": "皮损为小丘疹，以双手背为多，手心可见，面部也可见少许皮损。",
+      "query_title_en": "Would experts here please help take a look on this.  What kind of disease is this?",
+      "query_content_en": "The lesions at the skin are small papules.  Mainly on the back of the both hands.  Also appearing in the palms.  There are some skin lesions on the face.",
+      "query_title_es": "¿Podrían echar un vistazo a ésto los dermatólogos?  ¿Qué tipo de enfermedad es?",
+      "query_content_es": "Las lesiones en la piel son pequeñas pápulas,  principalmente en el dorso de ambas manos,  también en las palmas.  Hay algunas lesiones cutáneas en la cara.",
+      "responses": [
+        {
+          "content_en": "Eczema"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00880",
+      "author_id": "U02392",
+      "image_ids": [
+        "IMG_ENC00880_00001.jpeg"
+      ],
+      "query_title_zh": "讨教",
+      "query_content_zh": "患者，男性，32岁，双手臂出现红斑3月余，逐渐扩大，无痛无痒。",
+      "query_title_en": "Request for assistance.",
+      "query_content_en": "Patient is male, 32 years old.  Red spots appearing on both arms for more than 3 months.  Growing bigger gradually.  Not itchy or painful.",
+      "query_title_es": "Solicito ayuda.",
+      "query_content_es": "Paciente varón de 32 años.  Aparecen manchas rojas en ambos brazos desde hace más de 3 meses.  Crecen gradualmente.  No pican ni duelen.",
+      "responses": [
+        {
+          "content_en": "Rosacea."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00881",
+      "author_id": "U04552",
+      "image_ids": [
+        "IMG_ENC00881_00001.jpg",
+        "IMG_ENC00881_00002.jpg",
+        "IMG_ENC00881_00003.jpg",
+        "IMG_ENC00881_00004.jpg"
+      ],
+      "query_title_zh": "这是什么皮肤病？",
+      "query_content_zh": "我小孩全身出现小疱疹6天，颜面及手的背面较多，稍微有点痒。望各位专家指点这是什么皮肤病以及如何治疗,谢谢",
+      "query_title_en": "What kind of skin disease is this?",
+      "query_content_en": "My kid's body started to have small herpes for six days.  Mostly on the face and back of the hands.  It is a bit itchy.  Hope that the specialist can point out what kind of skin disease it is, and the treatment needed.",
+      "query_title_es": "¿De qué enfermedad cutánea se trata?",
+      "query_content_es": "Mi hijo empezó a tener pequeños herpes durante seis días, principalmente en la cara y el dorso de las manos. Pica un poco. Espero que un dermatólogo indique qué tipo de enfermedad de la piel es y el tratamiento necesario.",
+      "responses": [
+        {
+          "content_en": "It seems like skin measles."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00882",
+      "author_id": "U09933",
+      "image_ids": [
+        "IMG_ENC00882_00001.jpg",
+        "IMG_ENC00882_00002.jpg"
+      ],
+      "query_title_zh": "请看颈部",
+      "query_content_zh": "男 ，47岁，一喝酒脖子就这样。",
+      "query_title_en": "Please see the neck.",
+      "query_content_en": "A 47 years male.  It is just like that on the neck after drinking alcohol.",
+      "query_title_es": "Por favor mirad el cuello.",
+      "query_content_es": "Hombre de 47 años.  Le pasa ésto en el cuello después de beber alcohol.",
+      "responses": [
+        {
+          "content_en": "I think it's not a sebaceous cyst, but an exophytic skin lesion."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00883",
+      "author_id": "U06152",
+      "image_ids": [
+        "IMG_ENC00883_00001.jpg",
+        "IMG_ENC00883_00002.jpg",
+        "IMG_ENC00883_00003.jpg"
+      ],
+      "query_title_zh": "看看这是什么皮肤病",
+      "query_content_zh": "成年女患者,嘴唇下长丘疹半年余,有轻微痒感,挠破后里面有淡黄色渗液.经多方治疗久治不愈.请各位皮肤科高人指教指教是什么病,该如何治疗",
+      "query_title_en": "See what skin disease is this",
+      "query_content_en": "Patient is a female adult.  Got papule at the lower side of the lip for more thatn 6 months.  A little bit itchy.  There is pale yellow discharge when break open.  Unable to heal after taking many different treatments.  Request experts here to advise what problem it is and the treatment.",
+      "query_title_es": "Observe la enfermedad cutánea ",
+      "query_content_es": "La paciente es una mujer adulta.  Tiene una pápula en la parte inferior del labio desde hace más de 6 meses.  Pica un poco.  Hay una secreción amarilla pálida cuando se abre.  No se ha podido curar después de muchos tratamientos diferentes.  Pido a los expertos que me indiquen de qué problema se trata y cuál es el tratamiento.",
+      "responses": [
+        {
+          "content_en": "中共核不典型水痘-带状疱疹"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00884",
+      "author_id": "U09339",
+      "image_ids": [
+        "IMG_ENC00884_00001.jpg",
+        "IMG_ENC00884_00002.jpg",
+        "IMG_ENC00884_00003.jpg",
+        "IMG_ENC00884_00004.jpg"
+      ],
+      "query_title_zh": "大家来看看嘴里的水泡",
+      "query_content_zh": "患者男，55岁，2个月前无明显诱因下嘴唇内侧出现米粒大小水泡，一周后增大到现在大小，无明显不适，水泡周围微有烧灼感，用针挑破3，4天后又恢复如初，无其他情况。",
+      "query_title_en": "Would fellows here please take a look at the blister inside the mouth.",
+      "query_content_en": "The patient is male, 55 years old.  Without any obvious cause, he got a blister on the inside of the lower lip, the size of a piece of rice.  It grew to the present size a week later.  There is no obvious discomfort, and there is a mild burning sensation on the edge of the blister.  If poke it open, it would re-grow into the original state as before.  There is no other symptom.",
+      "query_title_es": "¿Podrían los médicos echar un vistazo a la ampolla de dentro de la boca?",
+      "query_content_es": "Paciente varón de 55 años. Sin ninguna causa evidente, le salió una ampolla en la parte interior del labio inferior, del tamaño de un grano de arroz. Creció hasta el tamaño actual una semana después. No presenta ninguna molestia evidente y tiene una leve sensación de ardor en el borde de la ampolla. Si se abre, vuelve a crecer hasta su estado original. No presenta ningún otro síntoma.",
+      "responses": [
+        {
+          "content_en": "Like a cold sores, use Liuxuefen外部用药"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00885",
+      "author_id": "U05350",
+      "image_ids": [
+        "IMG_ENC00885_00001.jpg",
+        "IMG_ENC00885_00002.jpg"
+      ],
+      "query_title_zh": "看图识病",
+      "query_content_zh": "患者 男   15岁  双下肢痒 疹1个多月  现感染；",
+      "query_title_en": "See picture for the disease.",
+      "query_content_en": "Patient is male and 15 years old.  Rashes in both lower limbs.  It is itchy and has been there for more than 1 month.  Show signs of infection.",
+      "query_title_es": "Ver foto para diagnóstico.",
+      "query_content_es": "Paciente varón de 15 años.  Erupciones en ambos miembros inferiores.  Comezón desde hace más de 1 mes.  Muestra signos de infección.",
+      "responses": [
+        {
+          "content_en": "Eczema,神通广大的湖南湘雅医院可以用中药治"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00886",
+      "author_id": "U20454",
+      "image_ids": [
+        "IMG_ENC00886_00001.jpg",
+        "IMG_ENC00886_00002.jpg"
+      ],
+      "query_title_zh": "这是不是梅毒疹",
+      "query_content_zh": "一个半月前和**有过WTKJ和DTXJ，今天发现胸口起了好多红斑。凸起的那颗是几年前就有的了，医生说是瘢痕疙瘩。4周验过rpr tp HIV一次没问题，看起来像梅毒疹吗",
+      "query_title_en": "Is this Syphilitic rash?",
+      "query_content_en": "Slept with someone with AIDS one and half month ago.  Today I found there are many red rashes on the chest.  The one swelling upward has been there for a few years already.  Physician said it is keloid.\nTested for RPR, TP and HIV 4 weeks ago, and showed no problem.  Does it look like syphilis?",
+      "query_title_es": "¿Ésto es una erupción sifilítica?",
+      "query_content_es": "Me acosté con un enfermo de SIDA hace un mes y medio.  Hoy he descubierto que tengo erupciones rojas en el pecho.\n La hinchada hacia arriba lleva ahí ya unos cuantos años,el médico ha dicho que es un queloide.\nMe hice las pruebas de RPR, TP y VIH hace 4 semanas, y fueron negativas.  ¿Parece sífilis?",
+      "responses": [
+        {
+          "content_en": "Test for RPR, TP and HIV 4 weeks ago, and showed no problem. It is not syphilis."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00887",
+      "author_id": "U00089",
+      "image_ids": [
+        "IMG_ENC00887_00001.jpg",
+        "IMG_ENC00887_00002.jpg"
+      ],
+      "query_title_zh": "可怜的老婆婆",
+      "query_content_zh": "患者女性、79岁，耳聋。腰背及臀部已烂了二十多天，又痛又痒，其他部位还可以，还一直在韭菜地干活，用过很多外用药(不知药名)，今天独自来门诊，请大家诊断一下。",
+      "query_title_en": "The poor old lady.",
+      "query_content_en": "The patient is female, 79 years old, deaf.  There are lesions on the lower back and buttock for more than 20 years.  It is painful and itchy.  Other part of the body is OK.  Still working in the vegetable garden, and has used many drugs (not knowing what they are).  Today she comes by herself for medical assistance.  Please help diagnose.\n",
+      "query_title_es": "Pobre anciana.",
+      "query_content_es": "La paciente es mujer, 79 años, sorda.  Tiene lesiones en la parte baja de la espalda y en las nalgas desde hace más de 20 años.  Le duelen y le pican.  El resto del cuerpo está bien.  Sigue trabajando en el huerto y ha utilizado muchos medicamentos (sin saber lo que son).  Hoy viene sola a pedir asistencia médica.  Por favor, ayuden a diagnosticar.\n",
+      "responses": [
+        {
+          "content_en": "thane rash"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00888",
+      "author_id": "U04593",
+      "image_ids": [
+        "IMG_ENC00888_00001.jpg",
+        "IMG_ENC00888_00002.jpg",
+        "IMG_ENC00888_00003.jpg"
+      ],
+      "query_title_zh": "看看背部红颗是什么？",
+      "query_content_zh": "背部红颗是什么？一到夏天就长红颗冬天没有，这个用什么药物",
+      "query_title_en": "Please see the red lump on the black of the body.  What is it?",
+      "query_content_en": "What are the red lumps on my back?  It grows in summer and goes away in winter.  What kinds of drugs can be used for this?",
+      "query_title_es": "¿Sabéis que es el bulto rojo de la espalda?",
+      "query_content_es": "¿Qué son los bultos rojos que tengo en la espalda?  Crecen en verano y desaparecen en invierno.  ¿Qué tipo de medicamentos se pueden utilizar para esto?",
+      "responses": [
+        {
+          "content_en": "It might be pigmental melasma, take care of your sun protection."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00889",
+      "author_id": "U00089",
+      "image_ids": [
+        "IMG_ENC00889_00001.jpg",
+        "IMG_ENC00889_00002.jpg",
+        "IMG_ENC00889_00003.jpg"
+      ],
+      "query_title_zh": "看看13岁小儿的指甲",
+      "query_content_zh": "患儿13岁，自3岁开始到现在，每天都要咬自己的右拇指及左中指指甲，不能克制自己。甲形态有变化，局部无自觉症状。请诊断",
+      "query_title_en": "Look at the finger nail of my 13 years old boy",
+      "query_content_en": "The juvenile patient is 13 years old.  Has  the habit of biting the nails of the right thumb and left middle finger since 3 years old.  Unable to kick the bad habit.  The appearance of the nails has changed.  No self detected symptom.  Please diagnose.",
+      "query_title_es": "Mira la uña de la mano de mi hijo de 13 años",
+      "query_content_es": "Paciente de 13 años.  Tiene el hábito de morderse las uñas del pulgar derecho y del dedo corazón izquierdo desde los 3 años.  No puede abandonar el mal hábito.  El aspecto de las uñas ha cambiado.  No se autodetecta ningún síntoma.  Por favor, diagnostique.",
+      "responses": [
+        {
+          "content_en": "The possibility of nail biting cannot be ruled out."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00890",
+      "author_id": "U08048",
+      "image_ids": [
+        "IMG_ENC00890_00001.jpg",
+        "IMG_ENC00890_00002.jpg",
+        "IMG_ENC00890_00003.jpg",
+        "IMG_ENC00890_00004.jpg"
+      ],
+      "query_title_zh": "孕妇产后5天",
+      "query_content_zh": "手机拍摄，技术也不好，大家不要见怪。\n患者为26岁产后5天，开始为后背，臀部花生米大小丘疹，伴瘙痒，开始为一粒，继发6-7粒，产后6天右手前臂出现两枚圆形4X3CM大小的“斑丘疹”有点像癣一样是个圆形的圈，，中间中心有粒针尖大小的水泡，，伴瘙痒，继而今天大腿内侧也出现数枚丘疹。患者无药物过敏史，现在服用阿莫西林胶囊，生化丸，益母草颗粒，饮食有海带，红枣，牛奶，鱼等。这张她刚洗完澡，皮损不清楚了，是一个大的圆圈，中间一粒水泡，水泡和圆圈自己应该是不红的，应该是正常皮肤 上章依次是右手，臀部，大腿内侧",
+      "query_title_en": "Pregnant woman 5 days after giving birth",
+      "query_content_en": "Pictures were taken by phone.  Not skilful in taking picture, apologize for that.\nThe patient is 26 years old.  Starting 5 days after giving birth with papule on the buttock and back of the body.  They are peanut size and itchy.  Starting with one, and later grew to 6 – 7 pieces.  6 days after giving birth, there came two maculopapule of 4 X 3 cm.  They look like tinea, are circular in shape, with a small needle head size blister in the middle.  They are itchy.  Today, a few papule are found on the inside part of the thigh.\nThe patient has no medical history of allergic to medications.  Now taking amoxicillin capsules, Shenghua Pill (A traditional Chinese medicine), and motherwort granules.  Diet include seaweed, red dates, milk and fish. \nThis picture was taken shortly after bath.  The skin lesion can not be seen clearly.  It is a big red circle, with a blister in the middle.  The blister and the round circle are not red, and they have normal skin color.\nThe sequence is the right arm, buttock and inner part of the thigh. ",
+      "query_title_es": "Embarazadas 5 días después del parto",
+      "query_content_es": "Las fotos fueron tomadas por teléfono.  No soy muy hábil tomando fotos, pido disculpas por ello.\nLa paciente tiene 26 años.  Comenzó 5 días después del parto con pápulas en las nalgas y en la parte posterior del cuerpo.  Son del tamaño de un cacahuete y pican.  Empezó con una, y luego aparecieron 6 - 7.  6 días después del parto, aparecieron dos maculopápulas de 4 X 3 cm.  Parecen tiñas, tienen forma circular, con una pequeña ampolla del tamaño de una cabeza de aguja en el centro.  Producen picor.  Actualmente, se encuentran algunas pápulas en la parte interna del muslo.\nLa paciente no tiene antecedentes médicos de alergia a medicamentos.  Ahora toma cápsulas de amoxicilina, la píldora Shenghua (una medicina tradicional china) y gránulos de agripalma.  La dieta incluye algas, dátiles rojos, leche y pescado. \nEsta foto fue tomada poco después del baño.  La lesión cutánea no puede verse claramente.  Es un gran círculo rojo, con una ampolla en el centro.  La ampolla y el círculo no son rojos y tienen el color normal de la piel.\nLa secuencia es el brazo derecho, la nalga y la parte interna del muslo. \n",
+      "responses": [
+        {
+          "content_en": "You need to provide more information about the condition before and after birth."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00891",
+      "author_id": "U00068",
+      "image_ids": [
+        "IMG_ENC00891_00001.jpg",
+        "IMG_ENC00891_00002.jpg"
+      ],
+      "query_title_zh": "和大家分享",
+      "query_content_zh": "患者,女,53岁,面部、颈周、前胸、手部，脐周、足部可见散在红斑及密集潮红色丘疹，斑丘疹，无水疱及渗出病史，自觉瘙痒，病程2年余，诉口服强的松后能很快消失，停药一周后皮损再次出现，",
+      "query_title_en": "Sharing with the community here.",
+      "query_content_en": "The patient is 53 years old, female.  There are sporadic red spots, dense red papula and maculopapule on the face, around the neck, front chest, hands, abdomen around the Periumbilical region, and feet.  There is no history of having blister and liquid discharge.  Feeling itchy.  Got the disease for more than 2 years.  Symptoms are subsiding fairly quickly after taking prednisone orally.  However, lesions re-appear when medication is stopped for a week.",
+      "query_title_es": "Compartiendo con esta comunidad.",
+      "query_content_es": "Mujer de 53 años.  Presenta manchas rojas esporádicas, pápula roja densa y maculopápula en la cara, alrededor del cuello, parte anterior del tórax, manos, abdomen alrededor de la región periumbilical y pies.  No hay antecedentes de ampollas y secreción líquida.  Sensación de picor.  Padece la enfermedad desde hace más de 2 años.  Los síntomas remiten con bastante rapidez tras tomar prednisona por vía oral.  Sin embargo, las lesiones reaparecen cuando se deja de tomar la medicación durante una semana.",
+      "responses": [
+        {
+          "content_en": "It should be a dermatitis, rather than lichen planus."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00892",
+      "author_id": "U19654",
+      "image_ids": [
+        "IMG_ENC00892_00001.jpg",
+        "IMG_ENC00892_00002.jpg"
+      ],
+      "query_title_zh": "这种小孩子手指出的水泡到底是什么病?怎么治?",
+      "query_content_zh": "【贴图】讨论有没人知这种疹",
+      "query_title_en": "What is the disease causing the blister at the finger of the child.  How to treat this?",
+      "query_content_en": "[Attached Picture] Discussion if any one has knowledge on this kind of rash.",
+      "query_title_es": "¿Qué enfermedad causa la ampolla en el dedo del niño?. ¿Cómo se trata?",
+      "query_content_es": "[Foto adjunta] ¿Alguien conoce este tipo de erupción?",
+      "responses": [
+        {
+          "content_en": "Like a viral infection."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00893",
+      "author_id": "U00498",
+      "image_ids": [
+        "IMG_ENC00893_00001.jpg",
+        "IMG_ENC00893_00002.jpg",
+        "IMG_ENC00893_00003.jpg"
+      ],
+      "query_title_zh": "求助",
+      "query_content_zh": "一到冬天就发作，夏天就好。发作几年了，痒，抓后如图，位置每年不固定，，，，，，，",
+      "query_title_en": "Request assistance.",
+      "query_content_en": "It acts up in Winter, and heals in Summer.  Has been like this for many years.  It is itchy.  See picture taken after scratching it.  The location of the problem is not fixed.",
+      "query_title_es": "Solicito ayuda.",
+      "query_content_es": "Aparece en invierno y se cura en verano.  Lleva así muchos años.  Pica.  Ver foto tomada después de rascarse.  La localización no es fija.",
+      "responses": [
+        {
+          "content_en": "Somewhat like Eczema, but we should still consider being cautious for the possibility of allergy."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00894",
+      "author_id": "U16579",
+      "image_ids": [
+        "IMG_ENC00894_00001.jpg"
+      ],
+      "query_title_zh": "帮我看一下这是什么皮肤病",
+      "query_content_zh": "每年夏天都有,只有小腿部位，大概一个月左右自己消失，比较痒。先是一个小红点，慢慢扩大。",
+      "query_title_en": "Please help see what skin disease this is.",
+      "query_content_en": "This happens every summer, only at the lower leg.  Only goes away in a month by itself.  Fairly itchy.  It starts as a small red spot, and growing larger gradually.",
+      "query_title_es": "¿De qué enfermedad cutánea se trata?",
+      "query_content_es": "Esto ocurre todos los veranos, sólo en la parte inferior de la pierna. Desaparece sola en un mes. Pica bastante. Empieza como una pequeña mancha roja, que va creciendo poco a poco.",
+      "responses": [
+        {
+          "content_en": "Allergic dermatitis."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00895",
+      "author_id": "U03310",
+      "image_ids": [
+        "IMG_ENC00895_00001.jpg",
+        "IMG_ENC00895_00002.jpg",
+        "IMG_ENC00895_00003.jpg",
+        "IMG_ENC00895_00004.jpg",
+        "IMG_ENC00895_00005.jpg"
+      ],
+      "query_title_zh": "请教各位专家，这是股癣吗？",
+      "query_content_zh": "去两家医院看了，第一家说主要考虑还是真菌感染，第二家说是股癣。出现这样的疹子已经近1月，去医院之前先用了复方酮康唑药膏擦涂，似有好转，但后来疹子又增加。去医院看了以后，开始用联苯苄唑溶液，一直控制不住，从照片中可以看出疹子的面积在扩大。所以想请教专家，这是股癣吗，或者说是真菌感染吗？如果是，为什么用药控制不住，而且还在扩散和蔓延。表面好像没有什么皮损，不痛不痒。如果不是，那是什么？\n没有其他症状，不痛不痒，就是疹子越来越多，变大变多，用抗真菌药多久会有效？医生配了联苯苄唑喷剂，和盐酸特比萘芬乳膏，让我先喷，再用乳膏抹到患处，这样行吗",
+      "query_title_en": "Would expert please help.  Is this tinea cruris?",
+      "query_content_en": "Have been to two hospitals. First one said that it is fungal infection.  Second one said it is tinea cruris. The rashes have come out for almost a month.    Before I went to the hospital, I used ketoconazole ointment topically, and there was seeminly some improvement.  However, the number of rashes were increasing later on.  After I went to the hospital, I started to use bifonazole solution.  But it is not under control.  From the picture, it can be seen the rashes are increasing in size.  With that, I would like expert here to determine whether it is fungal infection or tinea cruris.  If that is the case, why was the medication unable to put it under control, and it is growing and spreading out.  On the surface, there is no leisons, not itchy, not painful.  If that is not the case, what is the problem?  There is no other symptom, no itchiness, no pain, but the number of rashes is increasing and growing bigger.  How long would it take when using antifungal drug to make it effective.  The physician prescribed bifonazole spray and terbinafine hydrochloride cream.  First use the spray and then apply the cream at the problem area.  Is this OK?",
+      "query_title_es": "\nNecesito la ayuda de un dermatólogo. ¿Es una tiña crural?\n",
+      "query_content_es": "He estado en dos hospitales. El primero dijo que era una infección por hongos. El segundo, que era tiña crural. Las erupciones empezaron hace casi un mes. Antes de ir al hospital, utilicé una pomada de ketoconazol por vía tópica, y parecía que había cierta mejoría. Sin embargo, el número de erupciones fue aumentando posteriormente. Después de ir al hospital, empecé a utilizar una solución de bifonazol. Pero no está bajo control. En la foto, se puede ver que las erupciones están aumentando de tamaño. Por ello, me gustaría que un experto determinara si se trata de una infección fúngica o de una tiña crural. Si es así, ¿por qué la medicación no ha podido controlarla y está creciendo y extendiéndose? En la superficie, no hay lesiones, no pica, no duele. Si no es así, ¿cuál es el problema? No hay ningún otro síntoma, ni picor, ni dolor, pero el número de erupciones aumenta y se hace más grande. ¿Cuánto tiempo tardaría en hacer efecto un medicamento antifúngico? El médico me ha recetado bifonazol en spray y clorhidrato de terbinafine en crema. Primero uso el spray y luego aplico la crema en la zona problemática. ¿Es correcto?",
+      "responses": [
+        {
+          "content_en": "Prescribe Acetylsalicylic acid tablets, take twice a day. Use \"Ariel\" externally."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00896",
+      "author_id": "U01133",
+      "image_ids": [
+        "IMG_ENC00896_00001.jpg",
+        "IMG_ENC00896_00002.jpg"
+      ],
+      "query_title_zh": "女孩子的手天天象浸在水里一样。已经好长时间了。",
+      "query_content_zh": "看女孩子很可怜，作业都没有办法做。请教高手，有什么好的治疗办法？需要做交感神经手术吗？",
+      "query_title_en": "Girl's hands looks as if soaked in the water every day.  Has been like that for a long time.",
+      "query_content_en": "Pity on the girl, she is even unable to finish her homework.  Could experts here advise what good treatment is needed.  Is it required to perform a surgery on Sympathetic nerve?",
+      "query_title_es": "Parece que las manos de la chica hayan estado sumergidas en agua todos los días.  Lleva así mucho tiempo.",
+      "query_content_es": "Lástima por la niña, ni siquiera es capaz de terminar sus deberes.  ¿Podrían los expertos aconsejar qué tratamiento es necesario?  ¿Es necesario realizar cirugía en el nervio simpático?",
+      "responses": [
+        {
+          "content_en": "Why are the palms not sweaty?"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00897",
+      "author_id": "U00162",
+      "image_ids": [
+        "IMG_ENC00897_00001.jpg"
+      ],
+      "query_title_zh": "",
+      "query_content_zh": "位患者背部，二十多年无任何症状。",
+      "query_title_en": "",
+      "query_content_en": "The location of the problem is on the back of the body.  Has been there for 20 years, without symptoms.",
+      "query_title_es": "",
+      "query_content_es": "El problema se localiza en la parte posterior del cuerpo.  Lleva ahí 20 años, sin síntomas.",
+      "responses": [
+        {
+          "content_en": "Consider a partial acanthoma."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00898",
+      "author_id": "U08979",
+      "image_ids": [
+        "IMG_ENC00898_00001.jpg",
+        "IMG_ENC00898_00002.jpg"
+      ],
+      "query_title_zh": "请各位看是什么皮肤病",
+      "query_content_zh": "头顶处皮肤变白，头发变白，病变皮肤1厘米左右\n一年多，皮肤变白1.5厘米，中心有白发，鼻毛变白其他正常",
+      "query_title_en": "Please help see what kind of skin disease is this.",
+      "query_content_en": "The skin at the top of the head is turning white.  Hair turning white.  Skin having the problem is about 1 cm.\nFor more than 1 year.  1.5 cm skin turning white.  There are white hairs in the middle.  Nasal hair is also turning white.  Others normal.",
+      "query_title_es": "¿De qué enfermedad cutánea se trata?",
+      "query_content_es": "La piel de la parte superior de la cabeza se está volviendo blanca.  El pelo se está volviendo blanco.  La piel que tiene el problema es de aproximadamente 1 cm.\nDesde hace más de 1 año, 1,5 cm de piel se está volviendo blanca.  Hay pelos blancos en el medio.  El vello nasal también se está volviendo blanco.  Resto normal.\n",
+      "responses": [
+        {
+          "content_en": "考虑白化病"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00899",
+      "author_id": "U12169",
+      "image_ids": [
+        "IMG_ENC00899_00001.jpg",
+        "IMG_ENC00899_00002.jpg"
+      ],
+      "query_title_zh": "各位同行帮忙看看这是什么",
+      "query_content_zh": "我弟弟从事重体力劳动，发病一周，发病部位，后背，上臂上段，微痒，不痛",
+      "query_title_en": "Would our fellow professionals help see what this is.",
+      "query_content_en": "My younger brother works in the industry that requires lot of physical labor.  Got the disease for a week.  Locations in the body having the problem: On the back of the body, upper part of the arm.  It is mild itching but not painful.",
+      "query_title_es": "¿Podrían los médicos asistir en el diagnóstico?",
+      "query_content_es": "Mi hermano menor trabaja en la industria y requiere mucho trabajo físico.  \nTiene el problema desde hace una semana, en la espalda y parte superior del brazo. \n Es un picor leve y no doloroso.",
+      "responses": [
+        {
+          "content_en": "Pallor dermatitis, allergic rash?"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00900",
+      "author_id": "U20139",
+      "image_ids": [
+        "IMG_ENC00900_00001.jpg",
+        "IMG_ENC00900_00002.jpg"
+      ],
+      "query_title_zh": "这是什么皮肤病",
+      "query_content_zh": "单侧大腿前内侧，冬季易发，夜间较痒感明显，请教各位皮肤科老师是什么问题，怎样处理？谢谢！",
+      "query_title_en": "What kind of skin disease is this?",
+      "query_content_en": "It happens on the inner side, near the frontal part of one of the thigh.  It comes more often in winter.  The degree of itchiness is more pronounced at night.  May I ask experts in dermatology what this problem is, and the treatment needed.  Thanks a lot.",
+      "query_title_es": "¿De qué enfermedad cutánea se trata?",
+      "query_content_es": "Ocurre en la cara interna, cerca de la parte frontal de uno de los muslos.  Aparece con más frecuencia en invierno.  Pica más por la noche.  ¿Puedo preguntar a dermatólogos el diagnóstico y el tratamiento necesario?  Muchas gracias.",
+      "responses": [
+        {
+          "content_en": "Eczema!"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00901",
+      "author_id": "U03731",
+      "image_ids": [
+        "IMG_ENC00901_00001.jpg",
+        "IMG_ENC00901_00002.jpg",
+        "IMG_ENC00901_00003.jpg",
+        "IMG_ENC00901_00004.jpg",
+        "IMG_ENC00901_00005.jpg",
+        "IMG_ENC00901_00006.jpg"
+      ],
+      "query_title_zh": "十年病例（多图）",
+      "query_content_zh": "患者男，30，病史十年，起初仅腹部两侧有少量皮疹，后渐增多，现四肢近端也出现少量斑疹，不痛不痒，边界不甚清，局部感觉无异常，基本对称出现，皮损处干燥脱屑，\n从小有复发性口腔溃疡病史，曾诊断为白塞病。",
+      "query_title_en": "10 years of medical cases (multiple pictures)  parapsoriasis.",
+      "query_content_en": "The patient is male, 30 years old, with a medical history of 10 years.  When starting, there were a few rashes on two sides of the abdomen, which were increasing gradually.  Now the near parts of the four limbs also got a few rashes.  Not itchy or painful.  The boundary of them is not clear cut.  No abnormal feeling on affected areas.  They are also coming out symmetrically, and have dry scales at lesions.\nGot recurrent oral ulcer starting at young age.  Have diagnosed as Behcet's disease.",
+      "query_title_es": "10 años de casos médicos múltiples fotos) de parapsoriasis.",
+      "query_content_es": "El paciente es varón, de 30 años, con una historia clínica de 10 años.  Al empezar, había unas erupciones en dos lados del abdomen, que fueron aumentando gradualmente.  Ahora las partes proximales de las cuatro extremidades también tienen algunas erupciones.  No pican ni duelen.  El límite de las mismas no es claro.  No hay sensación anormal en las zonas afectadas.  También están saliendo simétricamente, y tienen escamas secas en las lesiones.\nTiene úlceras orales recurrentes desde muy joven.  Se ha diagnosticado como enfermedad de Behcet.\n",
+      "responses": [
+        {
+          "content_en": "Nodular urticaria"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00902",
+      "author_id": "U05117",
+      "image_ids": [
+        "IMG_ENC00902_00001.jpg",
+        "IMG_ENC00902_00002.jpg",
+        "IMG_ENC00902_00003.jpg"
+      ],
+      "query_title_zh": "请大家来会诊",
+      "query_content_zh": "患处碰到水会出现剧痒。请各位给点意见！",
+      "query_title_en": "Please help diagnose the disease together.",
+      "query_content_en": "There comes severe itchiness when the affected area is in contact with water.  Would people here provide advice please.",
+      "query_title_es": "Ayuden a diagnosticar juntos la enfermedad.",
+      "query_content_es": "Aparece una picazón intensa cuando la zona afectada entra en contacto con el agua. ¿Podríais aconsejarme? ",
+      "responses": [
+        {
+          "content_en": "Eczema! Eczema! Eczema! Eczema! Eczema! Eczema!"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00903",
+      "author_id": "U16855",
+      "image_ids": [
+        "IMG_ENC00903_00001.jpg"
+      ],
+      "query_title_zh": "皮肤瘙痒",
+      "query_content_zh": "一到秋冬季，本人的双下肢就出现瘙痒。成片，抓后出现小点状皮诊。求助治疗方法。",
+      "query_title_en": "Itchiness at Skin",
+      "query_content_en": "Whenever it comes to the Fall and Winter seasons, my lower limbs start to become itchy.  It is forming in patches, and small rashes are appearing after scratching.  Seeking help to treat the problem.",
+      "query_title_es": "Picor en la piel",
+      "query_content_es": "Cuando llega el otoño y el invierno, me empiezan a picar las piernas.  Se forman parches y aparecen pequeñas erupciones después de rascar.  ¿Qué tratamiento puedo hacer?",
+      "responses": [
+        {
+          "content_en": "Papular urticaria. It is a skin allergy caused by an allergic substance, so taking antihistamines can be effective."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00904",
+      "author_id": "U07270",
+      "image_ids": [
+        "IMG_ENC00904_00001.jpg",
+        "IMG_ENC00904_00002.jpg",
+        "IMG_ENC00904_00003.jpg",
+        "IMG_ENC00904_00004.jpg"
+      ],
+      "query_title_zh": "是什么皮疹",
+      "query_content_zh": "各位同行,这个是我的小孩5个多月大,未吃过母乳,间中吃水果和菜泥,上一两个星期发现他的耳朵和眼眉的地方出现一些红色皮疹,有点粗糙,有少许脱皮,边缘还算清楚,稍高于皮肤,皮温增高不明显,我在乡镇医院上班,有些病接触的比较少,知识有限,特向各位请教,是什么皮疹,用VE外擦有效吗,还是用其它的药,谢谢了",
+      "query_title_en": "What kind of rash is this?",
+      "query_content_en": "Fellow professionals, this is my 5 months old baby.  He is not breast fed, taking fruit and vegetable puree occasionally. Last week or two, found some red rashes on his ear and near the eyelash.  A bit rough, with some skin scales.  The edge is quite clear, slightly higher than the skin surface.  The temperature on that part is not conspicuously high.\nI work in a town-run hospital, have less contact with some diseases and not that knowledgeable.  Would ask for help to see what skin rash it is.  Is is useful to apply vitamin E topically, or use some other drugs.  Thanks a lot. ",
+      "query_title_es": "¿De qué tipo de erupción cutánea se trata?",
+      "query_content_es": "Compañeros profesionales, este es mi bebé de 5 meses.  No es amamantado, toma puré de frutas y verduras de vez en cuando. Hace una o dos semanas encontré algunas erupciones rojas en su oreja y cerca de la pestaña.  Un poco rugosas, con algunas escamas de piel.  El borde es bastante claro, ligeramente más alto que la superficie de la piel.  La temperatura en esa parte no es llamativamente alta.\nTrabajo en un hospital municipal, tengo menos contacto con algunas enfermedades.  Pediría ayuda para ver de qué erupción cutánea se trata.  ¿Es útil aplicar vitamina E tópicamente, o usar algún otro medicamento?  Muchas gracias. \n",
+      "responses": [
+        {
+          "content_en": "Is it contact dermatitis? The area is not very red. There are some rashes in the corner and a little scaling. Use vitamin E to apply externally, and use antiallergic drugs internally."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00905",
+      "author_id": "U16906",
+      "image_ids": [
+        "IMG_ENC00905_00001.jpg",
+        "IMG_ENC00905_00002.jpg",
+        "IMG_ENC00905_00003.jpg"
+      ],
+      "query_title_zh": "求助各位高人，这是什么",
+      "query_content_zh": "我老公这两天突然双腿长了很多这种红疹子，如果抓的话有瘙痒感，其他无特殊不适，大家帮忙看看这是什么吧，要怎么治疗啊",
+      "query_title_en": "Request help from expert.  What is this?",
+      "query_content_en": "My hushand' s two legs suddenly grew many red rashes two days ago. Would feel itchy if scratching.  There is no other discomfort.  Please help to see what it is and what treatment is needed.",
+      "query_title_es": "Necesito ayuda de un experto. ¿Qué es esto?\n\n\n",
+      "query_content_es": "Hace dos días, a mi marido le salieron muchas erupciones rojas en las piernas, picaban al rascar. Sin otras molestias. Por favor ayuda para el diagnóstico y tratamiento.",
+      "responses": [
+        {
+          "content_en": "Chronic urticaria,"
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00906",
+      "author_id": "U00897",
+      "image_ids": [
+        "IMG_ENC00906_00001.jpg",
+        "IMG_ENC00906_00002.jpg"
+      ],
+      "query_title_zh": "看图说病",
+      "query_content_zh": "女性，无不良嗜好，指甲开裂3个月了。\n                             该怎么办，现在隔日口服特比萘酚片2片和多抗甲素片，                                                     21金维他，但是就是不愈合。",
+      "query_title_en": "See picture for the disease.",
+      "query_content_en": "Female.  No bad habit.  The finger nail has been cracking for 3 months.  What should I do?  Now I am taking 2 Terbinafine tablets every other day, with Polyactin A  and multi-Vitamin tablets.  But it is not healing.",
+      "query_title_es": "Ver foto para diagnóstico.",
+      "query_content_es": "Mujer. Ningún mal hábito. La uña del dedo lleva 3 meses agrietándose. ¿Qué debo hacer? Ahora estoy tomando 2 comprimidos de terbinafina a días alternos, con poliactina A y comprimidos multivitamínicos. Pero no se cura.",
+      "responses": [
+        {
+          "content_en": "Fungal infection, you should try antifungal treatment."
+        }
+      ]
+    },
+    {
+      "encounter_id": "ENC00907",
+      "author_id": "U00089",
+      "image_ids": [
+        "IMG_ENC00907_00001.jpg"
+      ],
+      "query_title_zh": "看看她的两只大趾甲。",
+      "query_content_zh": "看看她的两只大趾甲，请诊断。",
+      "query_title_en": "Look at the nails of her two toes. ",
+      "query_content_en": "Please take a look on her nails at the big toes.  Please help diagnose.",
+      "query_title_es": "Mira las uñas de sus dos dedos del pie.",
+      "query_content_es": "Por favor, eche un vistazo a las uñas en los dedos gordos de los pies.  ¿Pueden ayudar en el diagnóstico? ",
+      "responses": [
+        {
+          "content_en": "Ringworm"
+        }
+      ]
+    }
+  ]
+}

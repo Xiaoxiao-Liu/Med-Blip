@@ -1,15 +1,15 @@
-{"image": "data/demo/images/sample_032.png", "question": "What color is the object?", "gold_answer": "green", "pred_answer": "green", "exact_match": true}
-{"image": "data/demo/images/sample_071.png", "question": "Describe the shape.", "gold_answer": "orange triangle", "pred_answer": "yellow", "exact_match": false}
-{"image": "data/demo/images/sample_065.png", "question": "What shape is shown?", "gold_answer": "square", "pred_answer": "orange", "exact_match": false}
-{"image": "data/demo/images/sample_005.png", "question": "What shape is shown?", "gold_answer": "square", "pred_answer": "red", "exact_match": false}
-{"image": "data/demo/images/sample_001.png", "question": "What shape is shown?", "gold_answer": "circle", "pred_answer": "red", "exact_match": false}
-{"image": "data/demo/images/sample_002.png", "question": "What color is the shape?", "gold_answer": "red", "pred_answer": "red", "exact_match": true}
-{"image": "data/demo/images/sample_054.png", "question": "What color is the shape?", "gold_answer": "purple", "pred_answer": "purple", "exact_match": true}
-{"image": "data/demo/images/sample_011.png", "question": "Describe the shape.", "gold_answer": "red triangle", "pred_answer": "red", "exact_match": false}
-{"image": "data/demo/images/sample_013.png", "question": "What shape is shown?", "gold_answer": "circle", "pred_answer": "blue", "exact_match": false}
-{"image": "data/demo/images/sample_017.png", "question": "What shape is shown?", "gold_answer": "square", "pred_answer": "blue", "exact_match": false}
-{"image": "data/demo/images/sample_028.png", "question": "What color is the object?", "gold_answer": "green", "pred_answer": "green", "exact_match": true}
-{"image": "data/demo/images/sample_031.png", "question": "Describe the shape.", "gold_answer": "green square", "pred_answer": "green", "exact_match": false}
-{"image": "data/demo/images/sample_035.png", "question": "Describe the shape.", "gold_answer": "green triangle", "pred_answer": "green", "exact_match": false}
-{"image": "data/demo/images/sample_003.png", "question": "Describe the shape.", "gold_answer": "red circle", "pred_answer": "red", "exact_match": false}
-{"image": "data/demo/images/sample_014.png", "question": "What color is the shape?", "gold_answer": "blue", "pred_answer": "blue", "exact_match": true}
+{"image": "data/demo/images/sample_032.png", "question": "What color is the object?", "lang": "en", "gold_answer": "green", "pred_answer": "green", "exact_match": true}
+{"image": "data/demo/images/sample_071.png", "question": "Describe the shape.", "lang": "en", "gold_answer": "orange triangle", "pred_answer": "orange", "exact_match": false}
+{"image": "data/demo/images/sample_065.png", "question": "What shape is shown?", "lang": "en", "gold_answer": "square", "pred_answer": "orange", "exact_match": false}
+{"image": "data/demo/images/sample_005.png", "question": "What shape is shown?", "lang": "en", "gold_answer": "square", "pred_answer": "red", "exact_match": false}
+{"image": "data/demo/images/sample_001.png", "question": "What shape is shown?", "lang": "en", "gold_answer": "circle", "pred_answer": "red", "exact_match": false}
+{"image": "data/demo/images/sample_002.png", "question": "What color is the shape?", "lang": "en", "gold_answer": "red", "pred_answer": "red", "exact_match": true}
+{"image": "data/demo/images/sample_054.png", "question": "What color is the shape?", "lang": "en", "gold_answer": "purple", "pred_answer": "purple", "exact_match": true}
+{"image": "data/demo/images/sample_011.png", "question": "Describe the shape.", "lang": "en", "gold_answer": "red triangle", "pred_answer": "red", "exact_match": false}
+{"image": "data/demo/images/sample_013.png", "question": "What shape is shown?", "lang": "en", "gold_answer": "circle", "pred_answer": "blue", "exact_match": false}
+{"image": "data/demo/images/sample_017.png", "question": "What shape is shown?", "lang": "en", "gold_answer": "square", "pred_answer": "blue", "exact_match": false}
+{"image": "data/demo/images/sample_028.png", "question": "What color is the object?", "lang": "en", "gold_answer": "green", "pred_answer": "green", "exact_match": true}
+{"image": "data/demo/images/sample_031.png", "question": "Describe the shape.", "lang": "en", "gold_answer": "green square", "pred_answer": "green", "exact_match": false}
+{"image": "data/demo/images/sample_035.png", "question": "Describe the shape.", "lang": "en", "gold_answer": "green triangle", "pred_answer": "green", "exact_match": false}
+{"image": "data/demo/images/sample_003.png", "question": "Describe the shape.", "lang": "en", "gold_answer": "red circle", "pred_answer": "red", "exact_match": false}
+{"image": "data/demo/images/sample_014.png", "question": "What color is the shape?", "lang": "en", "gold_answer": "blue", "pred_answer": "blue", "exact_match": true}

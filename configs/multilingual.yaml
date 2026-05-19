@@ -1,0 +1,38 @@
+# Multilingual Med-BLIP training config
+# Architecture: BLIP-2 + Language-Conditioned Q-Former (pipeline.png)
+
+backend: multilingual_blip2
+model_name: Salesforce/blip2-opt-2.7b
+
+# --- Data ---
+train_file: data/demo/train.jsonl
+val_file: data/demo/val.jsonl
+image_root: "."
+
+# Languages: en is always included as the base (MedCon 多语数据见 data/medcon/{lang}/)
+languages:
+  - en
+  - zh
+  - fr
+  - es
+
+# --- Training ---
+batch_size: 2
+learning_rate: 0.00002
+num_epochs: 5
+max_answer_length: 10
+output_dir: outputs/multilingual
+
+# --- Frozen components (Gray blocks in pipeline) ---
+freeze_vision: true
+freeze_lm: true
+
+# --- Language-Conditioned Q-Former (Green block) ---
+num_prefix_tokens: 4        # language-aware prefix tokens per language
+adapter_rank: 8              # LoRA rank for language-conditioned adapters
+adapter_alpha: 16.0          # LoRA scaling factor
+lang_embed_dim: 64           # dimension of language embedding L_i
+
+# --- Vision LoRA (Yellow block on ViT) ---
+lora_vision: false           # set true + freeze_vision=false to add LoRA to ViT
+lora_vision_rank: 8

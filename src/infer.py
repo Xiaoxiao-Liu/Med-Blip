@@ -21,7 +21,7 @@ TRANSFORM = transforms.Compose([
 ])
 
 
-def infer(cfg, image_path: str, question: str):
+def infer(cfg, image_path: str, question: str, lang: str = "en"):
     model = build_model(cfg)
 
     ckpt_path = os.path.join(cfg["output_dir"], "checkpoints", "last.pt")
@@ -36,12 +36,13 @@ def infer(cfg, image_path: str, question: str):
 
     image = Image.open(image_path).convert("RGB")
     image_tensor = TRANSFORM(image).unsqueeze(0)
-    prompt = format_prompt(question)
+    prompt = format_prompt(question, lang=lang)
 
     batch = {
         "images": image_tensor,
         "prompts": [prompt],
         "answers": [""],
+        "langs": [lang],
     }
 
     preds = model.generate(batch)
@@ -49,6 +50,7 @@ def infer(cfg, image_path: str, question: str):
 
     print(f"Image:    {image_path}")
     print(f"Question: {question}")
+    print(f"Language: {lang}")
     print(f"Answer:   {answer}")
     return answer
 
@@ -58,9 +60,11 @@ def main():
     parser.add_argument("--config", required=True)
     parser.add_argument("--image", required=True)
     parser.add_argument("--question", required=True)
+    parser.add_argument("--lang", default="en",
+                        help="Language code (en, zh, fr, es, ...)")
     args = parser.parse_args()
     cfg = load_config(args.config)
-    infer(cfg, args.image, args.question)
+    infer(cfg, args.image, args.question, lang=args.lang)
 
 
 if __name__ == "__main__":

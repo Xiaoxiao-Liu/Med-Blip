@@ -13,6 +13,18 @@ from src.utils import normalise_answer
 
 PROMPT_TEMPLATE = "Question: {question} Answer:"
 
+MULTILINGUAL_PROMPT_TEMPLATES = {
+    "en": "Question: {question} Answer:",
+    "zh": "问题：{question} 回答：",
+    "fr": "Question : {question} Réponse :",
+    "es": "Pregunta: {question} Respuesta:",
+    "de": "Frage: {question} Antwort:",
+    "ja": "質問：{question} 回答：",
+    "ko": "질문: {question} 답변:",
+    "pt": "Pergunta: {question} Resposta:",
+    "ar": "سؤال: {question} إجابة:",
+}
+
 DEFAULT_TRANSFORM = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -30,15 +42,18 @@ def load_jsonl(path: str) -> List[Dict]:
     return samples
 
 
-def format_prompt(question: str) -> str:
-    return PROMPT_TEMPLATE.format(question=question)
+def format_prompt(question: str, lang: str = "en") -> str:
+    template = MULTILINGUAL_PROMPT_TEMPLATES.get(lang, PROMPT_TEMPLATE)
+    return template.format(question=question)
 
 
 class VQADataset(Dataset):
-    def __init__(self, jsonl_path: str, image_root: str = ".", transform=None):
+    def __init__(self, jsonl_path: str, image_root: str = ".",
+                 transform=None, lang: str = "en"):
         self.samples = load_jsonl(jsonl_path)
         self.image_root = image_root
         self.transform = transform or DEFAULT_TRANSFORM
+        self.lang = lang
 
     def __len__(self):
         return len(self.samples)
@@ -48,7 +63,8 @@ class VQADataset(Dataset):
         img_path = os.path.join(self.image_root, item["image"])
         image = Image.open(img_path).convert("RGB")
         image = self.transform(image)
-        prompt = format_prompt(item["question"])
+        lang = item.get("lang", self.lang)
+        prompt = format_prompt(item["question"], lang=lang)
         answer = normalise_answer(item["answer"])
         return {
             "image": image,
@@ -57,6 +73,7 @@ class VQADataset(Dataset):
             "image_path": item["image"],
             "question": item["question"],
             "raw_answer": item["answer"],
+            "lang": lang,
         }
 
 
@@ -64,8 +81,41 @@ def collate_fn(batch):
     images = torch.stack([b["image"] for b in batch])
     prompts = [b["prompt"] for b in batch]
     answers = [b["answer"] for b in batch]
+    langs = [b.get("lang", "en") for b in batch]
     meta = [{k: b[k] for k in ("image_path", "question", "raw_answer")} for b in batch]
-    return {"images": images, "prompts": prompts, "answers": answers, "meta": meta}
+    return {
+        "images": images,
+        "prompts": prompts,
+        "answers": answers,
+        "langs": langs,
+        "meta": meta,
+    }
+
+
+class MultilingualVQADataset(Dataset):
+    """Demo VQA dataset wrapper (English base_jsonl from data/demo/).
+
+    Multilingual MedCon data lives under data/medcon/{lang}/.
+    """
+
+    def __init__(self, base_jsonl: str, image_root: str = ".",
+                 languages: Optional[List[str]] = None,
+                 split: str = "train", transform=None):
+        transform = transform or DEFAULT_TRANSFORM
+        self._dataset = VQADataset(
+            base_jsonl, image_root=image_root, transform=transform, lang="en"
+        )
+        self._concat = self._dataset
+
+    def __len__(self):
+        return len(self._concat)
+
+    def __getitem__(self, idx):
+        return self._concat[idx]
+
+    @property
+    def samples(self):
+        return self._dataset.samples
 
 
 # ---------------------------------------------------------------------------
@@ -109,6 +159,7 @@ class MedConDataset(Dataset):
             "prompt": prompt,
             "texts": texts,
             "responses_raw": responses,
+            "lang": self.lang,
         }
 
         if self.image_root and "image" in item:
@@ -124,12 +175,14 @@ def medcon_collate_fn(batch):
     prompts = [b["prompt"] for b in batch]
     all_texts = [b["texts"] for b in batch]
     all_responses = [b["responses_raw"] for b in batch]
+    langs = [b.get("lang", "en") for b in batch]
 
     result = {
         "encounter_ids": encounter_ids,
         "prompts": prompts,
         "texts": all_texts,
         "responses_raw": all_responses,
+        "langs": langs,
     }
 
     has_images = all("image" in b for b in batch)
